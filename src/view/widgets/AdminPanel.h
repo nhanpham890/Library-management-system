@@ -19,24 +19,29 @@ private:
     void setupBooksTab();
     void setupRequestsTab();
     void setupStyles();
+    
     void loadUserData();
     void loadBookData();
     void loadRequestData();
     
+    // Quản lý Độc giả
+    void viewSelectedUserDetail();
+    void addNewMember();
+    void suspendSelectedUser();
+    void deleteSelectedUser();
+
+    // Quản lý Sách
     void addBook();
     void editBook();
     void removeBook();
     
-    // Khai báo hàm xử lý duyệt yêu cầu để sửa lỗi biên dịch
+    // Quản lý Yêu cầu
     void handleApproveRequest(const QString &actionType);
-
-private slots:
-    void deleteSelectedUser();
 
 private:
     QTabWidget *tabWidget;
     
-    // Quản lý Độc giả
+    // Tab Độc giả
     QWidget *membersTab;
     QTableWidget *memberTable;
     QPushButton *refreshMemberBtn;
@@ -45,14 +50,14 @@ private:
     QPushButton *suspendMemberBtn;
     QPushButton *deleteMemberBtn;
 
-    // Quản lý Sách
+    // Tab Sách
     QWidget *booksTab;
     QTableWidget *bookTable;
     QPushButton *addBookBtn;
     QPushButton *editBookBtn;
     QPushButton *removeBookBtn;
 
-    // Quản lý Yêu cầu
+    // Tab Yêu cầu
     QWidget *requestsTab;
     QTableWidget *requestTable;
     QPushButton *approveBorrowBtn;

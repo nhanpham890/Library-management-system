@@ -429,7 +429,6 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qmetaobject.h \
  C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlError \
  C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlerror.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QDebug \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDialog \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFormLayout \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qformlayout.h \
@@ -444,4 +443,8 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QSpinBox \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qspinbox.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDoubleSpinBox
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDoubleSpinBox \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h

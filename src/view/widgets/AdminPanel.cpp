@@ -5,13 +5,13 @@
 #include <QMessageBox>
 #include <QSqlQuery>
 #include <QSqlError>
-#include <QDebug>
 #include <QDialog>
 #include <QFormLayout>
 #include <QLineEdit>
 #include <QSpinBox>
 #include <QDoubleSpinBox>
 #include <QPushButton>
+#include <QLabel>
 
 AdminPanel::AdminPanel(QWidget *parent) : QWidget(parent) {
     setWindowTitle("Hệ thống Quản trị Thư viện (Admin Dashboard)");
@@ -68,6 +68,9 @@ void AdminPanel::setupMembersTab() {
     layout->addLayout(btnLayout);
 
     connect(refreshMemberBtn, &QPushButton::clicked, this, &AdminPanel::loadUserData);
+    connect(viewMemberBtn, &QPushButton::clicked, this, &AdminPanel::viewSelectedUserDetail);
+    connect(addMemberBtn, &QPushButton::clicked, this, &AdminPanel::addNewMember);
+    connect(suspendMemberBtn, &QPushButton::clicked, this, &AdminPanel::suspendSelectedUser);
     connect(deleteMemberBtn, &QPushButton::clicked, this, &AdminPanel::deleteSelectedUser);
 }
 
@@ -128,7 +131,6 @@ void AdminPanel::setupRequestsTab() {
     btnLayout->addWidget(approveReturnBtn);
     layout->addLayout(btnLayout);
 
-    // Kết nối sự kiện cho các nút xử lý yêu cầu
     connect(approveBorrowBtn, &QPushButton::clicked, this, [=]() { handleApproveRequest("Borrow"); });
     connect(approveReserveBtn, &QPushButton::clicked, this, [=]() { handleApproveRequest("Reserve"); });
     connect(approveRenewBtn, &QPushButton::clicked, this, [=]() { handleApproveRequest("Renew"); });
@@ -140,16 +142,12 @@ void AdminPanel::setupStyles() {
         "QTabWidget::pane { border: 1px solid #cbd5e1; background: white; border-radius: 5px; }"
         "QTabBar::tab { background: #f1f5f9; color: #475569; padding: 10px 20px; border-right: 1px solid #cbd5e1; border-bottom: 1px solid #cbd5e1; font-weight: bold; }"
         "QTabBar::tab:selected { background: white; color: #2563eb; border-bottom: none; }"
-        
         "QTableWidget { background-color: white; color: #0f172a; gridline-color: #e2e8f0; font-size: 13px; }"
         "QHeaderView::section { background-color: #f8fafc; color: #0f172a; font-weight: bold; padding: 5px; border: 1px solid #e2e8f0; }"
-        
         "QPushButton { background-color: #2563eb; color: white; padding: 8px 14px; border-radius: 5px; font-weight: bold; }"
         "QPushButton:hover { background-color: #1d4ed8; }"
-        
         "QPushButton#dangerBtn { background-color: #dc2626; }"
         "QPushButton#dangerBtn:hover { background-color: #b91c1c; }"
-        
         "QPushButton#warningBtn { background-color: #d97706; }"
         "QPushButton#warningBtn:hover { background-color: #b45309; }"
     );
@@ -157,7 +155,7 @@ void AdminPanel::setupStyles() {
 
 void AdminPanel::loadUserData() {
     memberTable->setRowCount(0);
-    QSqlQuery query("SELECT id, username, email, phone, role FROM users ORDER BY id ASC");
+    QSqlQuery query("SELECT id, username, email, phone, role, status FROM users ORDER BY id ASC");
     int row = 0;
     while (query.next()) {
         memberTable->insertRow(row);
@@ -165,10 +163,166 @@ void AdminPanel::loadUserData() {
             memberTable->setItem(row, col, new QTableWidgetItem(query.value(col).toString()));
         }
        
-        QTableWidgetItem *statusItem = new QTableWidgetItem("Hoạt động");
-        statusItem->setForeground(QBrush(Qt::darkGreen));
+        QString status = query.value(5).toString().trimmed();
+        if (status.isEmpty()) status = "Active";
+
+        QTableWidgetItem *statusItem = new QTableWidgetItem(status == "Suspended" ? "Đã đình chỉ" : "Hoạt động");
+        statusItem->setForeground(status == "Suspended" ? QBrush(Qt::red) : QBrush(Qt::darkGreen));
         memberTable->setItem(row, 5, statusItem);
         row++;
+    }
+}
+
+void AdminPanel::viewSelectedUserDetail() {
+    int currentRow = memberTable->currentRow();
+    if (currentRow < 0) {
+        QMessageBox::warning(this, "Lỗi", "Vui lòng chọn một độc giả trong bảng để xem chi tiết!");
+        return;
+    }
+
+    QString id = memberTable->item(currentRow, 0)->text();
+    QString username = memberTable->item(currentRow, 1)->text();
+    QString email = memberTable->item(currentRow, 2)->text();
+    QString phone = memberTable->item(currentRow, 3)->text();
+    QString role = memberTable->item(currentRow, 4)->text();
+    QString status = memberTable->item(currentRow, 5)->text();
+
+    QDialog dlg(this);
+    dlg.setWindowTitle("Chi tiết độc giả: " + username);
+    dlg.setFixedSize(340, 270);
+    dlg.setStyleSheet("background-color: white; color: #1e293b; font-size: 13px;");
+
+    QVBoxLayout layout(&dlg);
+    layout.setContentsMargins(20, 20, 20, 20);
+    layout.setSpacing(10);
+
+    QLabel *title = new QLabel("Thông Tin Chi Tiết Tài Khoản");
+    title->setStyleSheet("font-size: 16px; font-weight: bold; color: #2563eb;");
+    layout.addWidget(title);
+
+    layout.addWidget(new QLabel("<b>Mã tài khoản (ID):</b> " + id));
+    layout.addWidget(new QLabel("<b>Tên đăng nhập:</b> " + username));
+    layout.addWidget(new QLabel("<b>Email:</b> " + email));
+    layout.addWidget(new QLabel("<b>Số điện thoại:</b> " + phone));
+    layout.addWidget(new QLabel("<b>Vai trò:</b> " + role));
+    layout.addWidget(new QLabel("<b>Trạng thái:</b> " + status));
+
+    layout.addStretch();
+    QPushButton *closeBtn = new QPushButton("Đóng", &dlg);
+    closeBtn->setStyleSheet("background-color: #2563eb; color: white; padding: 6px 14px; font-weight: bold; border-radius: 4px;");
+    layout.addWidget(closeBtn);
+
+    connect(closeBtn, &QPushButton::clicked, &dlg, &QDialog::accept);
+    dlg.exec();
+}
+
+void AdminPanel::addNewMember() {
+    QDialog dlg(this);
+    dlg.setWindowTitle("Thêm thành viên mới");
+    dlg.setFixedSize(350, 300);
+    dlg.setStyleSheet("background-color: white; color: #1e293b; font-size: 13px;");
+
+    QFormLayout form(&dlg);
+    form.setSpacing(10);
+
+    QLineEdit userEdit;
+    QLineEdit passEdit;
+    passEdit.setEchoMode(QLineEdit::Password);
+    QLineEdit emailEdit;
+    QLineEdit phoneEdit;
+
+    form.addRow("Tên tài khoản:", &userEdit);
+    form.addRow("Mật khẩu:", &passEdit);
+    form.addRow("Email:", &emailEdit);
+    form.addRow("Số điện thoại:", &phoneEdit);
+
+    QHBoxLayout btnLayout;
+    QPushButton saveBtn("Thêm");
+    QPushButton cancelBtn("Hủy");
+    saveBtn.setStyleSheet("background-color: #2563eb; color: white; padding: 6px 12px; font-weight: bold; border-radius: 4px;");
+    cancelBtn.setStyleSheet("background-color: #64748b; color: white; padding: 6px 12px; font-weight: bold; border-radius: 4px;");
+    
+    btnLayout.addWidget(&saveBtn);
+    btnLayout.addWidget(&cancelBtn);
+    form.addRow(&btnLayout);
+
+    connect(&cancelBtn, &QPushButton::clicked, &dlg, &QDialog::reject);
+    connect(&saveBtn, &QPushButton::clicked, [&]() {
+        QString username = userEdit.text().trimmed();
+        QString password = passEdit.text().trimmed();
+
+        if (username.isEmpty() || password.isEmpty()) {
+            QMessageBox::warning(&dlg, "Lỗi", "Tên tài khoản và Mật khẩu không được để trống!");
+            return;
+        }
+
+        QSqlQuery query;
+        query.prepare("INSERT INTO users (username, password, email, phone, role, status) VALUES (:user, :pass, :email, :phone, 'Member', 'Active')");
+        query.bindValue(":user", username);
+        query.bindValue(":pass", password);
+        query.bindValue(":email", emailEdit.text().trimmed());
+        query.bindValue(":phone", phoneEdit.text().trimmed());
+
+        if (query.exec()) {
+            QMessageBox::information(&dlg, "Thành công", "Đã thêm thành viên mới thành công!");
+            loadUserData();
+            dlg.accept();
+        } else {
+            QMessageBox::critical(&dlg, "Lỗi", "Tên tài khoản có thể đã tồn tại trong hệ thống!");
+        }
+    });
+
+    dlg.exec();
+}
+
+void AdminPanel::suspendSelectedUser() {
+    int currentRow = memberTable->currentRow();
+    if (currentRow < 0) {
+        QMessageBox::warning(this, "Lỗi", "Vui lòng chọn một độc giả để đình chỉ!");
+        return;
+    }
+
+    QString id = memberTable->item(currentRow, 0)->text();
+    QString username = memberTable->item(currentRow, 1)->text();
+    if (username.toLower() == "admin") {
+        QMessageBox::warning(this, "Từ chối", "Không thể đình chỉ tài khoản quản trị viên gốc!");
+        return;
+    }
+
+    QSqlQuery query;
+    query.prepare("UPDATE users SET status = 'Suspended' WHERE id = :id");
+    query.bindValue(":id", id);
+
+    if (query.exec()) {
+        QMessageBox::information(this, "Thành công", "Đã đình chỉ tài khoản thành công!");
+        loadUserData();
+    } else {
+        QMessageBox::critical(this, "Lỗi", "Không thể cập nhật trạng thái đình chỉ vào cơ sở dữ liệu!");
+    }
+}
+
+void AdminPanel::deleteSelectedUser() {
+    int currentRow = memberTable->currentRow();
+    if (currentRow < 0) {
+        QMessageBox::warning(this, "Lỗi", "Vui lòng chọn một thành viên để xóa!");
+        return;
+    }
+
+    QString id = memberTable->item(currentRow, 0)->text();
+    QString username = memberTable->item(currentRow, 1)->text();
+
+    if (username.toLower() == "admin") {
+        QMessageBox::warning(this, "Từ chối", "Không thể xóa tài khoản Quản trị viên gốc!");
+        return;
+    }
+
+    if (QMessageBox::question(this, "Xác nhận", "Xóa vĩnh viễn tài khoản: " + username + "?") == QMessageBox::Yes) {
+        QSqlQuery query;
+        query.prepare("DELETE FROM users WHERE id = :id");
+        query.bindValue(":id", id);
+        if (query.exec()) {
+            loadUserData();
+        }
     }
 }
 
@@ -187,10 +341,8 @@ void AdminPanel::loadBookData() {
 
 void AdminPanel::loadRequestData() {
     requestTable->setRowCount(0);
-    
-    // Thêm điều kiện WHERE status = 'Pending' để chỉ hiển thị các yêu cầu chưa duyệt
+    // Chỉ tải các yêu cầu có trạng thái Pending để yêu cầu sau khi duyệt sẽ biến mất
     QSqlQuery query("SELECT id, user_id, book_id, type, request_date, status FROM requests WHERE status = 'Pending' ORDER BY id ASC");
-    
     int row = 0;
     while (query.next()) {
         requestTable->insertRow(row);
@@ -198,31 +350,6 @@ void AdminPanel::loadRequestData() {
             requestTable->setItem(row, col, new QTableWidgetItem(query.value(col).toString()));
         }
         row++;
-    }
-}
-
-void AdminPanel::deleteSelectedUser() {
-    int currentRow = memberTable->currentRow();
-    if (currentRow < 0) {
-        QMessageBox::warning(this, "Lỗi", "Vui lòng chọn một thành viên để xóa!");
-        return;
-    }
-
-    QString id = memberTable->item(currentRow, 0)->text();
-    QString username = memberTable->item(currentRow, 1)->text();
-
-    if (username == "admin") {
-        QMessageBox::warning(this, "Từ chối", "Không thể xóa tài khoản Quản trị viên gốc!");
-        return;
-    }
-
-    if (QMessageBox::question(this, "Xác nhận", "Xóa vĩnh viễn tài khoản: " + username + "?") == QMessageBox::Yes) {
-        QSqlQuery query;
-        query.prepare("DELETE FROM users WHERE id = :id");
-        query.bindValue(":id", id);
-        if (query.exec()) {
-            loadUserData();
-        }
     }
 }
 
@@ -234,13 +361,6 @@ void AdminPanel::handleApproveRequest(const QString &actionType) {
     }
 
     QString requestId = requestTable->item(currentRow, 0)->text();
-    QString currentStatus = requestTable->item(currentRow, 5)->text();
-
-    if (currentStatus == "Approved" || currentStatus == "Completed") {
-        QMessageBox::information(this, "Thông báo", "Yêu cầu này đã được xử lý trước đó rồi!");
-        return;
-    }
-
     QSqlQuery query;
     query.prepare("UPDATE requests SET status = 'Approved' WHERE id = :id");
     query.bindValue(":id", requestId);
@@ -250,7 +370,7 @@ void AdminPanel::handleApproveRequest(const QString &actionType) {
         loadRequestData();
         emit dataChanged();
     } else {
-        QMessageBox::critical(this, "Lỗi", "Không thể cập nhật trạng thái yêu cầu trong cơ sở dữ liệu!");
+        QMessageBox::critical(this, "Lỗi", "Không thể cập nhật trạng thái yêu cầu!");
     }
 }
 
@@ -261,21 +381,10 @@ void AdminPanel::addBook() {
     dialog.setStyleSheet("background-color: white; color: #1e293b;");
 
     QFormLayout form(&dialog);
-
-    QLineEdit titleEdit;
-    QLineEdit authorEdit;
-    QLineEdit categoryEdit;
-    QSpinBox yearSpin;
-    yearSpin.setRange(1800, 2100);
-    yearSpin.setValue(2026);
-    QSpinBox qtySpin;
-    qtySpin.setRange(0, 10000);
-    qtySpin.setValue(1);
-    
-    QDoubleSpinBox priceSpin;
-    priceSpin.setRange(0.0, 100000.0);
-    priceSpin.setDecimals(2);
-    priceSpin.setValue(10.0);
+    QLineEdit titleEdit, authorEdit, categoryEdit;
+    QSpinBox yearSpin; yearSpin.setRange(1800, 2100); yearSpin.setValue(2026);
+    QSpinBox qtySpin; qtySpin.setRange(0, 10000); qtySpin.setValue(1);
+    QDoubleSpinBox priceSpin; priceSpin.setRange(0.0, 100000.0); priceSpin.setValue(10.0);
 
     form.addRow("Tên sách:", &titleEdit);
     form.addRow("Tác giả:", &authorEdit);
@@ -300,7 +409,6 @@ void AdminPanel::addBook() {
             QMessageBox::warning(&dialog, "Lỗi", "Tên sách không được để trống!");
             return;
         }
-
         QSqlQuery query;
         query.prepare("INSERT INTO books (title, author, category, year, quantity, price) VALUES (:title, :author, :category, :year, :quantity, :price)");
         query.bindValue(":title", titleEdit.text().trimmed());
@@ -314,11 +422,8 @@ void AdminPanel::addBook() {
             loadBookData();
             emit dataChanged();
             dialog.accept();
-        } else {
-            QMessageBox::critical(&dialog, "Lỗi", "Không thể thêm sách vào CSDL!");
         }
     });
-
     dialog.exec();
 }
 
@@ -343,21 +448,10 @@ void AdminPanel::editBook() {
     dialog.setStyleSheet("background-color: white; color: #1e293b;");
 
     QFormLayout form(&dialog);
-
-    QLineEdit titleEdit(currentTitle);
-    QLineEdit authorEdit(currentAuthor);
-    QLineEdit categoryEdit(currentCategory);
-    QSpinBox yearSpin;
-    yearSpin.setRange(1800, 2100);
-    yearSpin.setValue(currentYear > 0 ? currentYear : 2026);
-    QSpinBox qtySpin;
-    qtySpin.setRange(0, 10000);
-    qtySpin.setValue(currentQty);
-
-    QDoubleSpinBox priceSpin;
-    priceSpin.setRange(0.0, 100000.0);
-    priceSpin.setDecimals(2);
-    priceSpin.setValue(currentPrice);
+    QLineEdit titleEdit(currentTitle), authorEdit(currentAuthor), categoryEdit(currentCategory);
+    QSpinBox yearSpin; yearSpin.setRange(1800, 2100); yearSpin.setValue(currentYear > 0 ? currentYear : 2026);
+    QSpinBox qtySpin; qtySpin.setRange(0, 10000); qtySpin.setValue(currentQty);
+    QDoubleSpinBox priceSpin; priceSpin.setRange(0.0, 100000.0); priceSpin.setValue(currentPrice);
 
     form.addRow("Tên sách:", &titleEdit);
     form.addRow("Tác giả:", &authorEdit);
@@ -397,8 +491,6 @@ void AdminPanel::editBook() {
             loadBookData();
             emit dataChanged();
             dialog.accept();
-        } else {
-            QMessageBox::critical(&dialog, "Lỗi", "Không thể cập nhật thông tin sách!");
         }
     });
 
@@ -422,8 +514,6 @@ void AdminPanel::removeBook() {
         if (query.exec()) {
             loadBookData();
             emit dataChanged();
-        } else {
-            QMessageBox::critical(this, "Lỗi", "Không thể xóa sách khỏi cơ sở dữ liệu!");
         }
     }
 }

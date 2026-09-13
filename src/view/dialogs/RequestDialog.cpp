@@ -80,7 +80,6 @@ void RequestDialog::loadUserBooks() {
 void RequestDialog::handleSubmit() {
     QString reqType = requestTypeCombo->currentText();
     int bookId = bookCombo->currentData().toInt();
-    QString details = noteEdit->toPlainText().trimmed();
     QString currentDate = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss");
 
     QSqlQuery userQuery;

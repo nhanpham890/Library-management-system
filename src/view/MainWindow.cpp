@@ -26,16 +26,20 @@ MainWindow::MainWindow(QWidget *parent)
     resize(1000, 700);
     setStyleSheet("background-color: #ffffff; color: #1e293b;");
 
-    // Khôi phục phiên đăng nhập qua tham số dòng lệnh
+    // Đảm bảo cột status tồn tại trong bảng users
+    QSqlQuery alterQuery;
+    alterQuery.exec("ALTER TABLE users ADD COLUMN status TEXT DEFAULT 'Active'");
+
+    // Khôi phục phiên đăng nhập khi Reload App
     QStringList args = QCoreApplication::arguments();
     QString autoLoginUser = "";
     
     for (const QString &arg : args) {
         QSqlQuery checkQuery;
         checkQuery.prepare("SELECT username FROM users WHERE username = ?");
-        checkQuery.addBindValue(arg);
+        checkQuery.addBindValue(arg.trimmed());
         if (checkQuery.exec() && checkQuery.next()) {
-            autoLoginUser = checkQuery.value(0).toString();
+            autoLoginUser = checkQuery.value(0).toString().trimmed();
             break;
         }
     }
@@ -59,10 +63,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     headerLayout->addStretch();
 
-    // Nút Gửi yêu cầu (Send Request) dành cho User/Member đã đăng nhập
+    // Nút Gửi yêu cầu (Send Request)
     QPushButton *sendRequestBtn = new QPushButton("Gửi yêu cầu", this);
     sendRequestBtn->setCursor(Qt::PointingHandCursor);
-    sendRequestBtn->setVisible(isLoggedIn); // Hiển thị nếu đã đăng nhập
+    sendRequestBtn->setVisible(isLoggedIn);
     sendRequestBtn->setStyleSheet(
         "QPushButton {"
         "   background-color: #059669;"
@@ -77,7 +81,7 @@ MainWindow::MainWindow(QWidget *parent)
     );
     headerLayout->addWidget(sendRequestBtn);
 
-    // Nút Quản lý Admin (Chỉ hiển thị khi tài khoản là Admin)
+    // Nút Quản lý Admin
     QPushButton *adminPanelBtn = new QPushButton("Quản lý (Admin)", this);
     adminPanelBtn->setCursor(Qt::PointingHandCursor);
     adminPanelBtn->setVisible(false);
@@ -135,13 +139,13 @@ MainWindow::MainWindow(QWidget *parent)
     headerLayout->addWidget(authBtn);
     mainLayout->addLayout(headerLayout);
 
-    // Kiểm tra phân quyền Admin nếu khôi phục phiên đăng nhập
+    // Bật nút Admin nếu tài khoản phục hồi là Admin
     if (isLoggedIn) {
         QSqlQuery roleQuery;
         roleQuery.prepare("SELECT role FROM users WHERE username = ?");
         roleQuery.addBindValue(autoLoginUser);
         if (roleQuery.exec() && roleQuery.next()) {
-            if (roleQuery.value(0).toString().toLower() == "admin") {
+            if (roleQuery.value(0).toString().trimmed().toLower() == "admin") {
                 adminPanelBtn->setVisible(true);
             }
         }
@@ -156,14 +160,26 @@ MainWindow::MainWindow(QWidget *parent)
     statusBarWidget = new StatusBar(this);
     mainLayout->addWidget(statusBarWidget);
 
-    // Sự kiện mở dialog Gửi yêu cầu (Send Request)
+    // Chặn tài khoản bị đình chỉ gửi yêu cầu
     connect(sendRequestBtn, &QPushButton::clicked, this, [=]() {
         QString currentUsername = userStatusBtn->text().replace("Xin chào, ", "").trimmed();
+
+        QSqlQuery checkQuery;
+        checkQuery.prepare("SELECT status FROM users WHERE username = ?");
+        checkQuery.addBindValue(currentUsername);
+        if (checkQuery.exec() && checkQuery.next()) {
+            QString status = checkQuery.value(0).toString().trimmed().toLower();
+            if (status == "suspended") {
+                QMessageBox::warning(this, "Truy cập bị từ chối", "Tài khoản của bạn đã bị đình chỉ và không thể gửi yêu cầu hệ thống!");
+                return;
+            }
+        }
+
         RequestDialog reqDlg(currentUsername, this);
         reqDlg.exec();
     });
 
-    // Sự kiện mở bảng quản trị Admin
+    // Mở bảng Quản trị Admin
     connect(adminPanelBtn, &QPushButton::clicked, this, [=]() {
         AdminPanel *adminPanel = new AdminPanel();
         adminPanel->resize(950, 550);
@@ -175,29 +191,41 @@ MainWindow::MainWindow(QWidget *parent)
         adminPanel->show();
     });
 
-    // Sự kiện Đăng nhập / Đăng xuất
+    // Xử lý Đăng nhập / Đăng xuất an toàn
     connect(authBtn, &QPushButton::clicked, this, [=]() {
         if (!isLoggedIn) {
             LoginDialog loginDlg(this);
             if (loginDlg.exec() == QDialog::Accepted) {
-                QString username = loginDlg.getUsername();
+                QString username = loginDlg.getUsername().trimmed();
                 
+                // Lấy vai trò (role)
                 QSqlQuery query;
                 query.prepare("SELECT role FROM users WHERE username = ?");
                 query.addBindValue(username);
-                
                 QString role = "Member";
                 if (query.exec() && query.next()) {
-                    role = query.value(0).toString();
+                    role = query.value(0).toString().trimmed();
+                }
+
+                // Kiểm tra trạng thái khóa (status)
+                QSqlQuery statusQuery;
+                statusQuery.prepare("SELECT status FROM users WHERE username = ?");
+                statusQuery.addBindValue(username);
+                if (statusQuery.exec() && statusQuery.next()) {
+                    QString status = statusQuery.value(0).toString().trimmed().toLower();
+                    if (status == "suspended") {
+                        QMessageBox::warning(this, "Đăng nhập thất bại", "Tài khoản này đã bị đình chỉ hoạt động!");
+                        return;
+                    }
                 }
 
                 isLoggedIn = true;
                 userStatusBtn->setText("Xin chào, " + username);
                 authBtn->setText("Đăng xuất");
-                sendRequestBtn->setVisible(true); // Hiện nút Gửi yêu cầu khi đăng nhập
+                sendRequestBtn->setVisible(true);
 
                 if (role.toLower() == "admin") {
-                    adminPanelBtn->setVisible(true); // Hiện nút Quản lý Admin
+                    adminPanelBtn->setVisible(true);
                     QMessageBox::information(this, "Thông báo", "Đăng nhập thành công với tư cách Admin!");
                 } else {
                     adminPanelBtn->setVisible(false);
@@ -207,14 +235,14 @@ MainWindow::MainWindow(QWidget *parent)
         } else {
             isLoggedIn = false;
             adminPanelBtn->setVisible(false);
-            sendRequestBtn->setVisible(false); // Ẩn nút Gửi yêu cầu khi đăng xuất
+            sendRequestBtn->setVisible(false);
             userStatusBtn->setText("Xin chào, Guest");
             authBtn->setText("Đăng nhập / Đăng ký");
             bookListView->loadBooksFromDatabase();
         }
     });
 
-    // Sự kiện làm mới ứng dụng (Reload App) giữ nguyên phiên đăng nhập
+    // Làm mới App giữ nguyên phiên
     connect(reloadBtn, &QPushButton::clicked, this, [=]() {
         QString program = QCoreApplication::applicationFilePath();
         QStringList arguments;
@@ -230,7 +258,6 @@ MainWindow::MainWindow(QWidget *parent)
         QCoreApplication::quit();
     });
 
-    // Sự kiện xem thông tin tài khoản cá nhân
     connect(userStatusBtn, &QPushButton::clicked, this, [=]() {
         if (!isLoggedIn) {
             QMessageBox::information(this, "Thông báo", "Bạn chưa đăng nhập tài khoản!");
