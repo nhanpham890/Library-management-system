@@ -4447,3 +4447,119 @@ events:
         - "C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules"
         - "C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
 ...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:253 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
+    name: "Qt6Sql"
+    configs:
+      -
+        filename: "Qt6Sql.cps"
+        kind: "cps"
+      -
+        filename: "qt6sql.cps"
+        kind: "cps"
+      -
+        filename: "Qt6SqlConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6sql-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6Sql"
+      search_paths:
+        - "C:/Qt/6.11.1/mingw_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/pkgRedirects/Qt6SqlConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/pkgRedirects/qt6sql-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Sql.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/pkgRedirects/lib/cps/qt6sql.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/pkgRedirects/share/cps/Qt6Sql.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/pkgRedirects/share/cps/qt6sql.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6SqlConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.11.1/mingw_64/lib/cmake/qt6sql-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6SqlPrivate/Qt6SqlConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6SqlPrivate/qt6sql-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake"
+      mode: "config"
+      version: "6.11.1"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "C:/Qt/6.11.1/mingw_64"
+      ENV{PATH}:
+        - "C:\\Qt\\Tools\\mingw1310_64\\bin"
+        - "C:\\Qt\\Tools\\mingw1310_64\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Qt\\6.11.1\\mingw_64\\bin"
+        - "C:\\Qt\\Tools\\mingw1310_64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\thanh\\.local\\bin"
+        - "C:\\Users\\thanh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\thanh\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/QtFirstApp"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/QtFirstApp"
+...

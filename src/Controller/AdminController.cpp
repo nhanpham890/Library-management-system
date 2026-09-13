@@ -1,66 +1,54 @@
 #include "AdminController.h"
 #include <QSqlQuery>
-#include <QSqlError>
-#include <QDebug>
+#include <QVariant>
 
-AdminController::AdminController(Database* database) {
-    this->db = database;
-}
-
-QList<User> AdminController::getAllUsers() {
-    QList<User> userList;
-    QSqlQuery query("SELECT id, username, role, status FROM users");
-
+QList<QStringList> AdminController::getAllMembers() {
+    QList<QStringList> userList;
+    QSqlQuery query("SELECT id, username, email, phone, role FROM users ORDER BY id ASC");
     while (query.next()) {
-        int id = query.value(0).toInt();
-        QString username = query.value(1).toString();
-        QString role = query.value(2).toString();
-        bool status = query.value(3).toBool(); // true: hoạt động, false: bị khóa
-
-        User user(id, username, role, status);
-        userList.append(user);
+        QStringList userData;
+        for (int col = 0; col < 5; ++col) {
+            userData << query.value(col).toString();
+        }
+        userList.append(userData);
     }
     return userList;
 }
 
-bool AdminController::toggleUserStatus(int userId, bool isActive) {
+QStringList AdminController::viewMember(const QString &id) {
+    QStringList memberData;
     QSqlQuery query;
-    query.prepare("UPDATE users SET status = :status WHERE id = :id");
-    query.bindValue(":status", isActive);
-    query.bindValue(":id", userId);
-
-    if (!query.exec()) {
-        qDebug() << "Lỗi cập nhật trạng thái tài khoản:" << query.lastError().text();
-        return false;
+    query.prepare("SELECT id, username, email, phone, role FROM users WHERE id = ?");
+    query.addBindValue(id);
+    if (query.exec() && query.next()) {
+        for (int col = 0; col < 5; ++col) {
+            memberData << query.value(col).toString();
+        }
     }
-    return true;
+    return memberData;
 }
 
-bool AdminController::deleteUser(int userId) {
+bool AdminController::addMember(const QString &username, const QString &password, const QString &email, const QString &phone, const QString &role) {
     QSqlQuery query;
-    query.prepare("DELETE FROM users WHERE id = :id");
-    query.bindValue(":id", userId);
-
-    if (!query.exec()) {
-        qDebug() << "Lỗi xóa tài khoản:" << query.lastError().text();
-        return false;
-    }
-    return true;
+    query.prepare("INSERT INTO users (username, password, email, phone, role) VALUES (?, ?, ?, ?, ?)");
+    query.addBindValue(username);
+    query.addBindValue(password);
+    query.addBindValue(email);
+    query.addBindValue(phone);
+    query.addBindValue(role.isEmpty() ? "Member" : role);
+    return query.exec();
 }
 
-int AdminController::getSystemStat(const QString& statType) {
+bool AdminController::deleteMember(const QString &id) {
     QSqlQuery query;
-    
-    if (statType == "books") {
-        query.exec("SELECT COUNT(*) FROM books");
-    } else if (statType == "users") {
-        query.exec("SELECT COUNT(*) FROM users");
-    } else if (statType == "pending_requests") {
-        query.exec("SELECT COUNT(*) FROM requests WHERE status = 'Pending'");
-    }
+    query.prepare("DELETE FROM users WHERE id = ?");
+    query.addBindValue(id);
+    return query.exec();
+}
 
-    if (query.next()) {
-        return query.value(0).toInt();
-    }
-    return 0;
+bool AdminController::suspendMember(const QString &id) {
+    QSqlQuery query;
+    query.prepare("UPDATE users SET role = 'Suspended' WHERE id = ?");
+    query.addBindValue(id);
+    return query.exec();
 }

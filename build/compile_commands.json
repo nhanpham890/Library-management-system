@@ -1,85 +1,121 @@
 [
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\QtFirstApp_autogen\\mocs_compilation.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\build\\QtFirstApp_autogen\\mocs_compilation.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\QtFirstApp_autogen\\mocs_compilation.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\build\\QtFirstApp_autogen\\mocs_compilation.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/QtFirstApp_autogen/mocs_compilation.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/QtFirstApp_autogen/mocs_compilation.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\main.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\main.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\main.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\main.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/main.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/main.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\MainWindow.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\MainWindow.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\controller\\AdminController.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\controller\\AdminController.cpp\"",
+  "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/controller/AdminController.cpp",
+  "output": "CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.obj"
+},
+{
+  "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\controller\\BookController.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\controller\\BookController.cpp\"",
+  "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/controller/BookController.cpp",
+  "output": "CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.obj"
+},
+{
+  "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\controller\\RequestController.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\controller\\RequestController.cpp\"",
+  "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/controller/RequestController.cpp",
+  "output": "CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.obj"
+},
+{
+  "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\controller\\LoginController.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\controller\\LoginController.cpp\"",
+  "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/controller/LoginController.cpp",
+  "output": "CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.obj"
+},
+{
+  "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\MainWindow.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\MainWindow.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/MainWindow.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\AdminDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\AdminDialog.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\RequestDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\RequestDialog.cpp\"",
+  "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/RequestDialog.cpp",
+  "output": "CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj"
+},
+{
+  "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\AdminDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\AdminDialog.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/AdminDialog.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\BorrowDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\BorrowDialog.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\BorrowDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\BorrowDialog.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/BorrowDialog.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\LoginDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\LoginDialog.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\LoginDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\LoginDialog.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/LoginDialog.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\RegisterDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\RegisterDialog.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\RegisterDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\RegisterDialog.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/RegisterDialog.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\AdminPanel.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\AdminPanel.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\UserDetailDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\UserDetailDialog.cpp\"",
+  "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/UserDetailDialog.cpp",
+  "output": "CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.obj"
+},
+{
+  "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\AdminPanel.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\AdminPanel.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/AdminPanel.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\BookListView.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\BookListView.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\BookListView.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\BookListView.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/BookListView.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\BorrowView.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\BorrowView.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\BorrowView.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\BorrowView.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/BorrowView.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\DashboardWidget.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\DashboardWidget.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\DashboardWidget.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\DashboardWidget.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/DashboardWidget.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/widgets/DashboardWidget.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\FineListView.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\FineListView.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\FineListView.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\FineListView.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/FineListView.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/widgets/FineListView.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\SearchWidget.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\SearchWidget.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\SearchWidget.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\SearchWidget.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/SearchWidget.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/widgets/SearchWidget.cpp.obj"
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\StatusBar.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\StatusBar.cpp\"",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\StatusBar.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\StatusBar.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/StatusBar.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.obj"
 }

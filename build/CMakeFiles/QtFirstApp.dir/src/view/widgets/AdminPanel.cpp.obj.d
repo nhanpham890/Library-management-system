@@ -384,15 +384,64 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qsizepolicy.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTabWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabwidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtablewidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtableview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyleoption.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qslider.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabbar.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHBoxLayout \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHeaderView \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qheaderview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMessageBox \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmessagebox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlQuery \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlquery.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsql-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqldatabase.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qmetaobject.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlError \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlerror.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QDebug \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDialog \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFormLayout \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qformlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLayout \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLineEdit \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlineedit.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qurl.h
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qurl.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QSpinBox \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qspinbox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDoubleSpinBox

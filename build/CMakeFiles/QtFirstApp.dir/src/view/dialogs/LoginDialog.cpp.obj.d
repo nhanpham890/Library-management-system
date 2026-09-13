@@ -394,6 +394,7 @@ CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\src\view\dialogs\RegisterDialog.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
@@ -409,4 +410,14 @@ CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMessageBox \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmessagebox.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlQuery \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlquery.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsql-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqldatabase.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qmetaobject.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlError \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlerror.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlDatabase

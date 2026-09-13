@@ -4,6 +4,8 @@
 #include "PLESE7JIXV/moc_BorrowDialog.cpp"
 #include "PLESE7JIXV/moc_LoginDialog.cpp"
 #include "PLESE7JIXV/moc_RegisterDialog.cpp"
+#include "PLESE7JIXV/moc_RequestDialog.cpp"
+#include "PLESE7JIXV/moc_UserDetailDialog.cpp"
 #include "LV7LHKBMOZ/moc_AdminPanel.cpp"
 #include "LV7LHKBMOZ/moc_BookListView.cpp"
 #include "LV7LHKBMOZ/moc_BorrowView.cpp"

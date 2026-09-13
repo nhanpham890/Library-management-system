@@ -108,11 +108,71 @@ CMakeFiles/QtFirstApp.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtFirstApp.dir/src/main.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\main.cpp" -o CMakeFiles\QtFirstApp.dir\src\main.cpp.s
 
+CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.obj: CMakeFiles/QtFirstApp.dir/flags.make
+CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
+CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/controller/AdminController.cpp
+CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\controller\AdminController.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\controller\AdminController.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\AdminController.cpp"
+
+CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\AdminController.cpp" > CMakeFiles\QtFirstApp.dir\src\controller\AdminController.cpp.i
+
+CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\AdminController.cpp" -o CMakeFiles\QtFirstApp.dir\src\controller\AdminController.cpp.s
+
+CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.obj: CMakeFiles/QtFirstApp.dir/flags.make
+CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
+CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/controller/BookController.cpp
+CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\controller\BookController.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\controller\BookController.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\BookController.cpp"
+
+CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\BookController.cpp" > CMakeFiles\QtFirstApp.dir\src\controller\BookController.cpp.i
+
+CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\BookController.cpp" -o CMakeFiles\QtFirstApp.dir\src\controller\BookController.cpp.s
+
+CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.obj: CMakeFiles/QtFirstApp.dir/flags.make
+CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
+CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/controller/RequestController.cpp
+CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\controller\RequestController.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\controller\RequestController.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\RequestController.cpp"
+
+CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\RequestController.cpp" > CMakeFiles\QtFirstApp.dir\src\controller\RequestController.cpp.i
+
+CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\RequestController.cpp" -o CMakeFiles\QtFirstApp.dir\src\controller\RequestController.cpp.s
+
+CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.obj: CMakeFiles/QtFirstApp.dir/flags.make
+CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
+CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/controller/LoginController.cpp
+CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\controller\LoginController.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\controller\LoginController.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\LoginController.cpp"
+
+CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\LoginController.cpp" > CMakeFiles\QtFirstApp.dir\src\controller\LoginController.cpp.i
+
+CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\controller\LoginController.cpp" -o CMakeFiles\QtFirstApp.dir\src\controller\LoginController.cpp.s
+
 CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj: CMakeFiles/QtFirstApp.dir/flags.make
 CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/MainWindow.cpp
 CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\MainWindow.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\MainWindow.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\MainWindow.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.i: cmake_force
@@ -123,11 +183,26 @@ CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\MainWindow.cpp" -o CMakeFiles\QtFirstApp.dir\src\view\MainWindow.cpp.s
 
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/flags.make
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RequestDialog.cpp
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\dialogs\RequestDialog.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\dialogs\RequestDialog.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\RequestDialog.cpp"
+
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\RequestDialog.cpp" > CMakeFiles\QtFirstApp.dir\src\view\dialogs\RequestDialog.cpp.i
+
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\RequestDialog.cpp" -o CMakeFiles\QtFirstApp.dir\src\view\dialogs\RequestDialog.cpp.s
+
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/flags.make
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/AdminDialog.cpp
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\dialogs\AdminDialog.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\dialogs\AdminDialog.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\AdminDialog.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.i: cmake_force
@@ -142,7 +217,7 @@ CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj: CMakeFiles/QtFi
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/BorrowDialog.cpp
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\dialogs\BorrowDialog.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\dialogs\BorrowDialog.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\BorrowDialog.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.i: cmake_force
@@ -157,7 +232,7 @@ CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj: CMakeFiles/QtFir
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/LoginDialog.cpp
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\dialogs\LoginDialog.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\dialogs\LoginDialog.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\LoginDialog.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.i: cmake_force
@@ -172,7 +247,7 @@ CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj: CMakeFiles/Qt
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RegisterDialog.cpp
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\dialogs\RegisterDialog.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\dialogs\RegisterDialog.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\RegisterDialog.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.i: cmake_force
@@ -183,11 +258,26 @@ CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\RegisterDialog.cpp" -o CMakeFiles\QtFirstApp.dir\src\view\dialogs\RegisterDialog.cpp.s
 
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/flags.make
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/UserDetailDialog.cpp
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\dialogs\UserDetailDialog.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\dialogs\UserDetailDialog.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\UserDetailDialog.cpp"
+
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\UserDetailDialog.cpp" > CMakeFiles\QtFirstApp.dir\src\view\dialogs\UserDetailDialog.cpp.i
+
+CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\dialogs\UserDetailDialog.cpp" -o CMakeFiles\QtFirstApp.dir\src\view\dialogs\UserDetailDialog.cpp.s
+
 CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj: CMakeFiles/QtFirstApp.dir/flags.make
 CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/AdminPanel.cpp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\widgets\AdminPanel.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\widgets\AdminPanel.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\widgets\AdminPanel.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.i: cmake_force
@@ -202,7 +292,7 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj: CMakeFiles/QtFi
 CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/BookListView.cpp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\widgets\BookListView.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\widgets\BookListView.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\widgets\BookListView.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.i: cmake_force
@@ -217,7 +307,7 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.obj: CMakeFiles/QtFirs
 CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/BorrowView.cpp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\widgets\BorrowView.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\widgets\BorrowView.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\widgets\BorrowView.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.i: cmake_force
@@ -232,7 +322,7 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/DashboardWidget.cpp.obj: CMakeFiles/Q
 CMakeFiles/QtFirstApp.dir/src/view/widgets/DashboardWidget.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/DashboardWidget.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/DashboardWidget.cpp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/DashboardWidget.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/DashboardWidget.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/DashboardWidget.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/widgets/DashboardWidget.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\widgets\DashboardWidget.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\widgets\DashboardWidget.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\widgets\DashboardWidget.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/widgets/DashboardWidget.cpp.i: cmake_force
@@ -247,7 +337,7 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/FineListView.cpp.obj: CMakeFiles/QtFi
 CMakeFiles/QtFirstApp.dir/src/view/widgets/FineListView.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/FineListView.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/FineListView.cpp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/FineListView.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/FineListView.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/FineListView.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/widgets/FineListView.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\widgets\FineListView.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\widgets\FineListView.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\widgets\FineListView.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/widgets/FineListView.cpp.i: cmake_force
@@ -262,7 +352,7 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/SearchWidget.cpp.obj: CMakeFiles/QtFi
 CMakeFiles/QtFirstApp.dir/src/view/widgets/SearchWidget.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/SearchWidget.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/SearchWidget.cpp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/SearchWidget.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/SearchWidget.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/SearchWidget.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/widgets/SearchWidget.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\widgets\SearchWidget.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\widgets\SearchWidget.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\widgets\SearchWidget.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/widgets/SearchWidget.cpp.i: cmake_force
@@ -277,7 +367,7 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.obj: CMakeFiles/QtFirst
 CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.obj: CMakeFiles/QtFirstApp.dir/includes_CXX.rsp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.obj: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/StatusBar.cpp
 CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.obj: CMakeFiles/QtFirstApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.obj -MF CMakeFiles\QtFirstApp.dir\src\view\widgets\StatusBar.cpp.obj.d -o CMakeFiles\QtFirstApp.dir\src\view\widgets\StatusBar.cpp.obj -c "C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\src\view\widgets\StatusBar.cpp"
 
 CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.i: cmake_force
@@ -292,11 +382,17 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.s: cmake_force
 QtFirstApp_OBJECTS = \
 "CMakeFiles/QtFirstApp.dir/QtFirstApp_autogen/mocs_compilation.cpp.obj" \
 "CMakeFiles/QtFirstApp.dir/src/main.cpp.obj" \
+"CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.obj" \
+"CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.obj" \
+"CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.obj" \
+"CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.obj" \
 "CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj" \
+"CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj" \
 "CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.obj" \
 "CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj" \
 "CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj" \
 "CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj" \
+"CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.obj" \
 "CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj" \
 "CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj" \
 "CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.obj" \
@@ -310,11 +406,17 @@ QtFirstApp_EXTERNAL_OBJECTS =
 
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/QtFirstApp_autogen/mocs_compilation.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/main.cpp.obj
+QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.obj
+QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.obj
+QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.obj
+QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj
+QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/dialogs/AdminDialog.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj
+QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/widgets/BorrowView.cpp.obj
@@ -324,12 +426,13 @@ QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/widgets/SearchWidget.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/src/view/widgets/StatusBar.cpp.obj
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/build.make
 QtFirstApp.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Widgets.a
+QtFirstApp.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Sql.a
 QtFirstApp.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Gui.a
 QtFirstApp.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Core.a
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/linkLibs.rsp
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/objects1.rsp
 QtFirstApp.exe: CMakeFiles/QtFirstApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable QtFirstApp.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\thanh\OneDrive\Desktop\Library Management System Specification\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable QtFirstApp.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\QtFirstApp.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,90 +1,86 @@
 #include "RequestController.h"
 #include <QSqlQuery>
-#include <QSqlError>
-#include <QDebug>
-#include <QDateTime>
+#include <QVariant>
+#include <QDate>
 
-RequestController::RequestController(Database* database) {
-    this->db = database;
-}
-
-bool RequestController::createBorrowRequest(int userId, int bookId) {
-    QSqlQuery query;
-    // Trạng thái mặc định ban đầu có thể là "Pending" (Đang chờ duyệt)
-    query.prepare("INSERT INTO requests (user_id, book_id, status, request_date) VALUES (:user_id, :book_id, 'Pending', NOW())");
-    query.bindValue(":user_id", userId);
-    query.bindValue(":book_id", bookId);
-
-    if (!query.exec()) {
-        qDebug() << "Lỗi tạo yêu cầu mượn sách:" << query.lastError().text();
-        return false;
-    }
-    return true;
-}
-
-bool RequestController::approveRequest(int requestId) {
-    QSqlQuery query;
-    // Khi Admin duyệt, đổi trạng thái thành "Approved" và có thể trừ số lượng sách trong kho
-    query.prepare("UPDATE requests SET status = 'Approved' WHERE id = :id");
-    query.bindValue(":id", requestId);
-
-    if (!query.exec()) {
-        qDebug() << "Lỗi duyệt yêu cầu:" << query.lastError().text();
-        return false;
-    }
-    return true;
-}
-
-bool RequestController::returnBook(int requestId, int bookId) {
-    // Sử dụng transaction để đảm bảo cập nhật trạng thái phiếu mượn và cộng lại số lượng sách thành công cùng lúc
-    QSqlDatabase::database().transaction();
-
-    QSqlQuery queryReq;
-    queryReq.prepare("UPDATE requests SET status = 'Returned', return_date = NOW() WHERE id = :id");
-    queryReq.bindValue(":id", requestId);
-
-    QSqlQuery queryBook;
-    queryBook.prepare("UPDATE books SET quantity = quantity + 1 WHERE id = :book_id");
-    queryBook.bindValue(":book_id", bookId);
-
-    if (queryReq.exec() && queryBook.exec()) {
-        QSqlDatabase::database().commit();
-        return true;
-    } else {
-        QSqlDatabase::database().rollback();
-        qDebug() << "Lỗi trả sách:" << queryReq.lastError().text();
-        return false;
-    }
-}
-
-bool RequestController::extendRequest(int requestId) {
-    QSqlQuery query;
-    // Cập nhật lại ngày hết hạn mượn (ví dụ cộng thêm thời gian)
-    query.prepare("UPDATE requests SET due_date = DATE_ADD(due_date, INTERVAL 7 DAY) WHERE id = :id");
-    query.bindValue(":id", requestId);
-
-    if (!query.exec()) {
-        qDebug() << "Lỗi gia hạn sách:" << query.lastError().text();
-        return false;
-    }
-    return true;
-}
-
-QList<Request> RequestController::getAllRequests() {
-    QList<Request> requestList;
-    QSqlQuery query("SELECT id, user_id, book_id, status, request_date, due_date FROM requests");
-
+QList<QStringList> RequestController::getAllRequests() {
+    QList<QStringList> requestList;
+    QSqlQuery query("SELECT id, user_id, book_id, type, request_date, status FROM requests ORDER BY id ASC");
     while (query.next()) {
-        int id = query.value(0).toInt();
-        int userId = query.value(1).toInt();
-        int bookId = query.value(2).toInt();
-        QString status = query.value(3).toString();
-        QString requestDate = query.value(4).toString();
-        QString dueDate = query.value(5).toString();
-
-        Request req(id, userId, bookId, status, requestDate, dueDate);
-        requestList.append(req);
+        QStringList reqData;
+        for (int col = 0; col < 6; ++col) {
+            reqData << query.value(col).toString();
+        }
+        requestList.append(reqData);
     }
-
     return requestList;
+}
+
+bool RequestController::checkCondition(const QString &bookId, const QString &condition) {
+    QSqlQuery query;
+    query.prepare("UPDATE books SET category = category WHERE id = ?");
+    query.addBindValue(bookId);
+    return query.exec();
+}
+
+bool RequestController::fineMember(const QString &userId, double amount, const QString &reason) {
+    QSqlQuery createFineTable;
+    createFineTable.exec("CREATE TABLE IF NOT EXISTS fines ("
+                         "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                         "user_id INTEGER, "
+                         "amount REAL, "
+                         "reason TEXT, "
+                         "fine_date DATE)");
+
+    QSqlQuery query;
+    query.prepare("INSERT INTO fines (user_id, amount, reason, fine_date) VALUES (?, ?, ?, ?)");
+    query.addBindValue(userId);
+    query.addBindValue(amount);
+    query.addBindValue(reason);
+    query.addBindValue(QDate::currentDate().toString("yyyy-MM-dd"));
+    return query.exec();
+}
+
+bool RequestController::approveBorrowBook(const QString &requestId, const QString &condition) {
+    QSqlQuery query;
+    query.prepare("UPDATE requests SET status = 'Approved' WHERE id = ?");
+    query.addBindValue(requestId);
+    return query.exec();
+}
+
+bool RequestController::approveReturnBook(const QString &requestId, const QString &condition, double fineAmount) {
+    QSqlQuery query;
+    query.prepare("SELECT user_id, book_id FROM requests WHERE id = ?");
+    query.addBindValue(requestId);
+    
+    if (query.exec() && query.next()) {
+        QString userId = query.value(0).toString();
+        QString bookId = query.value(1).toString();
+
+        checkCondition(bookId, condition);
+
+        if (fineAmount > 0.0) {
+            fineMember(userId, fineAmount, "Condition violation: " + condition);
+        }
+
+        QSqlQuery updateQuery;
+        updateQuery.prepare("UPDATE requests SET status = 'Returned' WHERE id = ?");
+        updateQuery.addBindValue(requestId);
+        return updateQuery.exec();
+    }
+    return false;
+}
+
+bool RequestController::approveReserveBook(const QString &requestId) {
+    QSqlQuery query;
+    query.prepare("UPDATE requests SET status = 'Reserved' WHERE id = ?");
+    query.addBindValue(requestId);
+    return query.exec();
+}
+
+bool RequestController::approveRenewBook(const QString &requestId) {
+    QSqlQuery query;
+    query.prepare("UPDATE requests SET status = 'Renewed' WHERE id = ?");
+    query.addBindValue(requestId);
+    return query.exec();
 }

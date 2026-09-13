@@ -2,31 +2,22 @@
 #define BOOKLISTVIEW_H
 
 #include <QWidget>
-#include <QGridLayout>
 #include <QScrollArea>
-#include <QList>
-#include <QFrame>
-
-struct BookData {
-    QString title;          // Search by title
-    QString author;         // Search by author
-    QString subject;        // Search by subject
-    QString pubDate;        // Search by publication date
-    QString qty;
-    QString price;
-    QString color;
-    QFrame* cardWidget;
-};
+#include <QGridLayout>
+#include <QString>
 
 class BookListView : public QWidget {
     Q_OBJECT
 public:
     explicit BookListView(QWidget *parent = nullptr);
-    void searchBooks(const QString &criteria, const QString &keyword);
+    void loadBooksFromDatabase(const QString &keyword = "", const QString &searchType = "Search by title");
 
 private:
-    QGridLayout* gridLayout;
-    QList<BookData> allBooks;
+    QScrollArea *scrollArea;
+    QWidget *containerWidget;
+    QGridLayout *gridLayout;
+
+    void showBookDetailDialog(int id, const QString &title, const QString &author, const QString &category, int year, int quantity, double price);
 };
 
-#endif // BOOKLISTVIEW_H
+#endif

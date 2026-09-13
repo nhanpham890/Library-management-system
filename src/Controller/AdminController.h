@@ -1,29 +1,17 @@
-#ifndef ADMIN_CONTROLLER_H
-#define ADMIN_CONTROLLER_H
+#ifndef ADMINCONTROLLER_H
+#define ADMINCONTROLLER_H
 
 #include <QString>
 #include <QList>
-#include "../models/Database.h"
-#include "../models/User.h" // Class thực thể người dùng
+#include <QStringList>
 
 class AdminController {
-private:
-    Database* db; // Con trỏ kết nối cơ sở dữ liệu
-
 public:
-    AdminController(Database* database);
-
-    // Lấy danh sách toàn bộ người dùng trong hệ thống
-    QList<User> getAllUsers();
-
-    // Khóa hoặc mở khóa tài khoản người dùng
-    bool toggleUserStatus(int userId, bool isActive);
-
-    // Xóa tài khoản người dùng khỏi hệ thống
-    bool deleteUser(int userId);
-
-    // Lấy thống kê hệ thống (số lượng sách, số lượng user, số yêu cầu đang chờ duyệt...)
-    int getSystemStat(const QString& statType);
+    static QList<QStringList> getAllMembers();
+    static QStringList viewMember(const QString &id);
+    static bool addMember(const QString &username, const QString &password, const QString &email, const QString &phone, const QString &role);
+    static bool deleteMember(const QString &id);
+    static bool suspendMember(const QString &id);
 };
 
-#endif // ADMIN_CONTROLLER_H
+#endif

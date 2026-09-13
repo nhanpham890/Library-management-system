@@ -1,75 +1,57 @@
 #include "BookController.h"
 #include <QSqlQuery>
-#include <QSqlError>
-#include <QDebug>
+#include <QVariant>
 
-BookController::BookController(Database* database) {
-    this->db = database;
-}
-
-QList<Book> BookController::searchBooks(const QString& keyword) {
-    QList<Book> bookList;
-    QSqlQuery query;
-    
-    // Tìm kiếm gần đúng theo tên sách hoặc tác giả sử dụng câu lệnh LIKE
-    query.prepare("SELECT id, title, author, quantity FROM books WHERE title LIKE :kw OR author LIKE :kw");
-    query.bindValue(":kw", "%" + keyword + "%");
-
-    if (query.exec()) {
-        while (query.next()) {
-            int id = query.value(0).toInt();
-            QString title = query.value(1).toString();
-            QString author = query.value(2).toString();
-            int quantity = query.value(3).toInt();
-
-            // Khởi tạo đối tượng Book và thêm vào danh sách kết quả
-            Book book(id, title, author, quantity);
-            bookList.append(book);
+QList<QStringList> BookController::getAllBooks() {
+    QList<QStringList> bookList;
+    QSqlQuery query("SELECT id, title, author, category, quantity FROM books ORDER BY id ASC");
+    while (query.next()) {
+        QStringList bookData;
+        for (int col = 0; col < 5; ++col) {
+            bookData << query.value(col).toString();
         }
-    } else {
-        qDebug() << "Lỗi tìm kiếm sách:" << query.lastError().text();
+        bookList.append(bookData);
     }
-
     return bookList;
 }
 
-bool BookController::addBook(const QString& title, const QString& author, int quantity) {
+QStringList BookController::getBook(const QString &id) {
+    QStringList bookData;
     QSqlQuery query;
-    query.prepare("INSERT INTO books (title, author, quantity) VALUES (:title, :author, :quantity)");
-    query.bindValue(":title", title);
-    query.bindValue(":author", author);
-    query.bindValue(":quantity", quantity);
-
-    if (!query.exec()) {
-        qDebug() << "Lỗi thêm sách:" << query.lastError().text();
-        return false;
+    query.prepare("SELECT id, title, author, category, quantity FROM books WHERE id = ?");
+    query.addBindValue(id);
+    if (query.exec() && query.next()) {
+        for (int col = 0; col < 5; ++col) {
+            bookData << query.value(col).toString();
+        }
     }
-    return true;
+    return bookData;
 }
 
-bool BookController::deleteBook(int bookId) {
+bool BookController::addBook(const QString &title, const QString &author, const QString &category, int quantity) {
     QSqlQuery query;
-    query.prepare("DELETE FROM books WHERE id = :id");
-    query.bindValue(":id", bookId);
-
-    if (!query.exec()) {
-        qDebug() << "Lỗi xóa sách:" << query.lastError().text();
-        return false;
-    }
-    return true;
+    query.prepare("INSERT INTO books (title, author, category, quantity) VALUES (?, ?, ?, ?)");
+    query.addBindValue(title);
+    query.addBindValue(author);
+    query.addBindValue(category);
+    query.addBindValue(quantity);
+    return query.exec();
 }
 
-bool BookController::updateBook(int bookId, const QString& title, const QString& author, int quantity) {
+bool BookController::editBook(const QString &id, const QString &title, const QString &author, const QString &category, int quantity) {
     QSqlQuery query;
-    query.prepare("UPDATE books SET title = :title, author = :author, quantity = :quantity WHERE id = :id");
-    query.bindValue(":title", title);
-    query.bindValue(":author", author);
-    query.bindValue(":quantity", quantity);
-    query.bindValue(":id", bookId);
+    query.prepare("UPDATE books SET title = ?, author = ?, category = ?, quantity = ? WHERE id = ?");
+    query.addBindValue(title);
+    query.addBindValue(author);
+    query.addBindValue(category);
+    query.addBindValue(quantity);
+    query.addBindValue(id);
+    return query.exec();
+}
 
-    if (!query.exec()) {
-        qDebug() << "Lỗi cập nhật sách:" << query.lastError().text();
-        return false;
-    }
-    return true;
+bool BookController::removeBook(const QString &id) {
+    QSqlQuery query;
+    query.prepare("DELETE FROM books WHERE id = ?");
+    query.addBindValue(id);
+    return query.exec();
 }

@@ -387,51 +387,6 @@ CMakeFiles/QtFirstApp.dir/QtFirstApp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabwidget.h \
- C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/SearchWidget.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qurl.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
- C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/BookListView.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollArea \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollarea.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QList \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFrame \
- C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/DashboardWidget.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLineEdit \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlineedit.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyleoption.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qslider.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabbar.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h \
- C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/StatusBar.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtmochelpers.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtmocconstants.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q20algorithm.h \
@@ -443,19 +398,69 @@ CMakeFiles/QtFirstApp.dir/QtFirstApp_autogen/mocs_compilation.cpp.obj: \
  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/BorrowDialog.h \
  C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_LoginDialog.cpp \
  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/LoginDialog.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLineEdit \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlineedit.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qurl.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
  C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_RegisterDialog.cpp \
  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RegisterDialog.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_RequestDialog.cpp \
+ C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RequestDialog.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_UserDetailDialog.cpp \
+ C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/UserDetailDialog.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
  C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\LV7LHKBMOZ/moc_AdminPanel.cpp \
  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/AdminPanel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTabWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtablewidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtableview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyleoption.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qslider.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabbar.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
  C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\LV7LHKBMOZ/moc_BookListView.cpp \
  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/BookListView.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollArea \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
  C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\LV7LHKBMOZ/moc_BorrowView.cpp \
  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/BorrowView.h \
  C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\LV7LHKBMOZ/moc_DashboardWidget.cpp \
  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/DashBoardWidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
  C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\LV7LHKBMOZ/moc_FineListView.cpp \
  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/FineListView.h \
  C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\LV7LHKBMOZ/moc_SearchWidget.cpp \
  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/SearchWidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
  C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\LV7LHKBMOZ/moc_StatusBar.cpp \
  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/StatusBar.h

@@ -1,32 +1,19 @@
-#ifndef REQUEST_CONTROLLER_H
-#define REQUEST_CONTROLLER_H
+#ifndef REQUESTCONTROLLER_H
+#define REQUESTCONTROLLER_H
 
 #include <QString>
 #include <QList>
-#include "../models/Database.h"
-#include "../models/Request.h" // Class thực thể phiếu mượn/trả
+#include <QStringList>
 
 class RequestController {
-private:
-    Database* db; // Con trỏ kết nối cơ sở dữ liệu
-
 public:
-    RequestController(Database* database);
-
-    // Người dùng gửi yêu cầu mượn sách
-    bool createBorrowRequest(int userId, int bookId);
-
-    // Admin duyệt yêu cầu mượn sách
-    bool approveRequest(int requestId);
-
-    // Xử lý trả sách (cập nhật trạng thái và ngày trả)
-    bool returnBook(int requestId, int bookId);
-
-    // Gia hạn thời gian mượn sách
-    bool extendRequest(int requestId);
-
-    // Lấy danh sách các phiếu mượn (để hiển thị lên giao diện)
-    QList<Request> getAllRequests();
+    static QList<QStringList> getAllRequests();
+    static bool approveBorrowBook(const QString &requestId, const QString &condition);
+    static bool approveReturnBook(const QString &requestId, const QString &condition, double fineAmount = 0.0);
+    static bool approveReserveBook(const QString &requestId);
+    static bool approveRenewBook(const QString &requestId);
+    static bool checkCondition(const QString &bookId, const QString &condition);
+    static bool fineMember(const QString &userId, double amount, const QString &reason);
 };
 
-#endif // REQUEST_CONTROLLER_H
+#endif

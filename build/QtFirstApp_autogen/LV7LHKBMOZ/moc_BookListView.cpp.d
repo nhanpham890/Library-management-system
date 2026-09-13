@@ -1,6 +1,6 @@
 C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/build/QtFirstApp_autogen/LV7LHKBMOZ/moc_BookListView.cpp: C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/BookListView.h \
   C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/build/QtFirstApp_autogen/moc_predefs.h \
-  C:/Qt/6.11.1/mingw_64/include/QtCore/QList \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
   C:/Qt/6.11.1/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/q20bit.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/q20functional.h \
@@ -155,7 +155,6 @@ C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/build
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFrame \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollArea \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \

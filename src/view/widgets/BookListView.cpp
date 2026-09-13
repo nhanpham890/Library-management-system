@@ -1,124 +1,185 @@
 #include "BookListView.h"
 #include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QLabel>
-
-QFrame* createInlineBookCard(const QString& title, const QString& author, const QString& subject, const QString& pubDate, const QString& quantity, const QString& price, const QString& catColor) {
-    QFrame* card = new QFrame();
-    card->setStyleSheet("QFrame { background-color: white; border: 1px solid #e0e0e0; border-radius: 8px; } QLabel { border: none; }");
-    card->setFixedSize(210, 310);
-
-    QVBoxLayout* layout = new QVBoxLayout(card);
-    layout->setSpacing(5);
-    layout->setContentsMargins(12, 12, 12, 12);
-
-    QLabel* imgLabel = new QLabel("Bìa Sách");
-    imgLabel->setAlignment(Qt::AlignCenter);
-    imgLabel->setStyleSheet("background-color: #f0f0f0; color: #888; border-radius: 4px; font-size: 12px;");
-    imgLabel->setFixedHeight(90);
-    layout->addWidget(imgLabel);
-
-    QLabel* titleLabel = new QLabel("<b>" + title + "</b>");
-    titleLabel->setWordWrap(true);
-    titleLabel->setStyleSheet("font-size: 13px; color: #222;");
-    titleLabel->setFixedHeight(35);
-    layout->addWidget(titleLabel);
-
-    QLabel* authorLabel = new QLabel("Tác giả: " + author);
-    authorLabel->setStyleSheet("font-size: 11px; color: #555;");
-    layout->addWidget(authorLabel);
-
-    QLabel* subLabel = new QLabel("Chủ đề: " + subject);
-    subLabel->setStyleSheet("background-color: " + catColor + "; padding: 2px 4px; border-radius: 3px; font-size: 10px; color: #333;");
-    subLabel->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
-    layout->addWidget(subLabel);
-
-    QLabel* dateLabel = new QLabel("Năm XB: " + pubDate);
-    dateLabel->setStyleSheet("font-size: 11px; color: #666;");
-    layout->addWidget(dateLabel);
-
-    QLabel* qtyLabel = new QLabel("Kho: " + quantity + " | 🟢 Có sẵn");
-    qtyLabel->setStyleSheet("font-size: 11px; color: #2e7d32; font-weight: bold;");
-    layout->addWidget(qtyLabel);
-
-    QLabel* priceLabel = new QLabel("Giá: " + price);
-    priceLabel->setStyleSheet("font-size: 12px; color: #444; font-weight: bold;");
-    layout->addWidget(priceLabel);
-
-    layout->addStretch();
-    return card;
-}
+#include <QPushButton>
+#include <QDialog>
+#include <QSqlQuery>
 
 BookListView::BookListView(QWidget *parent) : QWidget(parent) {
-    QVBoxLayout* mainLayout = new QVBoxLayout(this);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
-    QScrollArea* scrollArea = new QScrollArea();
+    scrollArea = new QScrollArea(this);
     scrollArea->setWidgetResizable(true);
-    scrollArea->setStyleSheet("QScrollArea { border: none; background-color: #f5f7f9; }");
+    scrollArea->setStyleSheet("QScrollArea { border: none; background: transparent; }");
 
-    QWidget* scrollContent = new QWidget();
-    scrollContent->setStyleSheet("background-color: #f5f7f9;");
-    gridLayout = new QGridLayout(scrollContent);
-    gridLayout->setSpacing(20);
-    gridLayout->setContentsMargins(20, 20, 20, 20);
+    containerWidget = new QWidget();
+    containerWidget->setStyleSheet("background: transparent;");
+    gridLayout = new QGridLayout(containerWidget);
+    gridLayout->setSpacing(16);
+    gridLayout->setContentsMargins(0, 0, 0, 0);
 
-    // Khởi tạo danh sách sách mẫu chuẩn theo các tiêu chí trong Use Case
-    allBooks = {
-        {"The Catcher in the Rye", "J.D. Salinger", "Anthologies & Collections", "1951", "6", "8.99", "#e0e0e0", nullptr},
-        {"Atomic Habits", "James Clear", "Non-Fiction", "2018", "6", "11.98", "#ffe0b2", nullptr},
-        {"Harry Potter", "J.K. Rowling", "Poetry and Drama", "1997", "2", "9.99", "#e1bee7", nullptr},
-        {"The Lean Startup", "Eric Ries", "Business & Economics", "2011", "7", "16.00", "#ffcdd2", nullptr},
-        {"Educated: A Memoir", "Tara Westover", "Academic/Reference", "2018", "12", "9.00", "#b3e5fc", nullptr},
-        {"The Subtle Art", "Mark Manson", "Business & Economics", "2016", "3", "12.99", "#ffcdd2", nullptr}
-    };
-
-    for(int i = 0; i < allBooks.size(); ++i) {
-        int row = i / 4; 
-        int col = i % 4; 
-        allBooks[i].cardWidget = createInlineBookCard(
-            allBooks[i].title, allBooks[i].author, allBooks[i].subject, 
-            allBooks[i].pubDate, allBooks[i].qty, allBooks[i].price, allBooks[i].color
-        );
-        gridLayout->addWidget(allBooks[i].cardWidget, row, col);
-    }
-
-    gridLayout->setRowStretch(gridLayout->rowCount(), 1);
-    scrollArea->setWidget(scrollContent);
+    scrollArea->setWidget(containerWidget);
     mainLayout->addWidget(scrollArea);
+
+    loadBooksFromDatabase();
 }
 
-// Xử lý logic tìm kiếm phân rã theo biểu đồ Use Case (Search catalog -> Search by...)
-void BookListView::searchBooks(const QString &criteria, const QString &keyword) {
-    int visibleIndex = 0;
-    QString query = keyword.trimmed().toLower();
-
-    for (auto &book : allBooks) {
-        bool match = false;
-
-        if (criteria.contains("title")) {
-            match = book.title.toLower().contains(query);
-        } else if (criteria.contains("author")) {
-            match = book.author.toLower().contains(query);
-        } else if (criteria.contains("subject")) {
-            match = book.subject.toLower().contains(query);
-        } else if (criteria.contains("publication date")) {
-            match = book.pubDate.toLower().contains(query);
-        } else {
-            // Tìm kiếm tổng quát trên tất cả trường nếu chọn mục "Tất cả"
-            match = book.title.toLower().contains(query) || 
-                    book.author.toLower().contains(query) || 
-                    book.subject.toLower().contains(query) || 
-                    book.pubDate.toLower().contains(query);
+void BookListView::loadBooksFromDatabase(const QString &keyword, const QString &searchType) {
+    QLayoutItem *child;
+    while ((child = gridLayout->takeAt(0)) != nullptr) {
+        if (child->widget()) {
+            delete child->widget();
         }
+        delete child;
+    }
 
-        if (query.isEmpty() || match) {
-            int row = visibleIndex / 4;
-            int col = visibleIndex % 4;
-            gridLayout->addWidget(book.cardWidget, row, col);
-            book.cardWidget->show();
-            visibleIndex++;
+    QSqlQuery query;
+    QString sql = "SELECT id, title, author, category, year, quantity, price FROM books";
+    
+    if (!keyword.isEmpty()) {
+        if (searchType == "Search by title") {
+            sql += " WHERE title LIKE :keyword";
+        } else if (searchType == "Search by author") {
+            sql += " WHERE author LIKE :keyword";
+        } else if (searchType == "Search by subject") {
+            sql += " WHERE category LIKE :keyword";
+        } else if (searchType == "Search by publication date") {
+            sql += " WHERE year LIKE :keyword";
         } else {
-            book.cardWidget->hide();
+            sql += " WHERE title LIKE :keyword OR author LIKE :keyword OR category LIKE :keyword OR year LIKE :keyword";
         }
     }
+    
+    sql += " ORDER BY id ASC";
+    query.prepare(sql);
+    
+    if (!keyword.isEmpty()) {
+        query.bindValue(":keyword", "%" + keyword + "%");
+    }
+    
+    query.exec();
+
+    int index = 0;
+    while (query.next()) {
+        int id = query.value(0).toInt();
+        QString title = query.value(1).toString();
+        QString author = query.value(2).toString();
+        QString category = query.value(3).toString();
+        int year = query.value(4).toInt();
+        int quantity = query.value(5).toInt();
+        double price = query.value(6).toDouble();
+
+        QPushButton *card = new QPushButton(containerWidget);
+        card->setCursor(Qt::PointingHandCursor);
+        card->setFixedSize(220, 220);
+        card->setStyleSheet(
+            "QPushButton {"
+            "   background-color: white;"
+            "   border: 1px solid #e2e8f0;"
+            "   border-radius: 8px;"
+            "   text-align: left;"
+            "}"
+            "QPushButton:hover {"
+            "   border: 1px solid #3b82f6;"
+            "   background-color: #f8fafc;"
+            "}"
+        );
+
+        QVBoxLayout *cardLayout = new QVBoxLayout(card);
+        cardLayout->setContentsMargins(12, 12, 12, 12);
+        cardLayout->setSpacing(6);
+
+        QLabel *coverImg = new QLabel();
+        coverImg->setFixedHeight(110);
+        coverImg->setText("Bìa Sách");
+        coverImg->setAlignment(Qt::AlignCenter);
+        coverImg->setStyleSheet("background-color: #f1f5f9; border-radius: 4px; color: #64748b; font-size: 13px;");
+        cardLayout->addWidget(coverImg);
+
+        QLabel *titleLabel = new QLabel(title);
+        titleLabel->setWordWrap(true);
+        titleLabel->setStyleSheet("font-size: 14px; font-weight: bold; color: #0f172a; border: none; background: transparent;");
+        cardLayout->addWidget(titleLabel);
+
+        QLabel *authorLabel = new QLabel("Tác giả: " + author);
+        authorLabel->setStyleSheet("font-size: 12px; color: #64748b; border: none; background: transparent;");
+        cardLayout->addWidget(authorLabel);
+
+        QLabel *catLabel = new QLabel(category);
+        catLabel->setStyleSheet("background-color: #fed7aa; color: #9a3412; font-size: 11px; padding: 2px 6px; border-radius: 4px; border: none; max-width: 160px;");
+        cardLayout->addWidget(catLabel);
+        cardLayout->addStretch();
+
+        connect(card, &QPushButton::clicked, this, [=]() {
+            QSqlQuery freshQuery;
+            freshQuery.prepare("SELECT quantity FROM books WHERE id = ?");
+            freshQuery.addBindValue(id);
+            int currentQty = quantity;
+            if (freshQuery.exec() && freshQuery.next()) {
+                currentQty = freshQuery.value(0).toInt();
+            }
+
+            showBookDetailDialog(id, title, author, category, year, currentQty, price);
+        });
+
+        int row = index / 4;
+        int col = index % 4;
+        gridLayout->addWidget(card, row, col);
+        index++;
+    }
+}
+
+void BookListView::showBookDetailDialog(int id, const QString &title, const QString &author, const QString &category, int year, int quantity, double price) {
+    QDialog detailDialog(this);
+    detailDialog.setWindowTitle("Chi tiết sách: " + title);
+    detailDialog.setFixedSize(380, 420);
+    detailDialog.setStyleSheet("background-color: white; color: #1e293b;");
+
+    QVBoxLayout *layout = new QVBoxLayout(&detailDialog);
+    layout->setContentsMargins(24, 24, 24, 24);
+    layout->setSpacing(12);
+
+    QLabel *cover = new QLabel();
+    cover->setFixedHeight(140);
+    cover->setText("Bìa Sách");
+    cover->setAlignment(Qt::AlignCenter);
+    cover->setStyleSheet("background-color: #f1f5f9; border-radius: 6px; color: #64748b; font-size: 16px;");
+    layout->addWidget(cover);
+
+    QLabel *lblTitle = new QLabel(title);
+    lblTitle->setStyleSheet("font-size: 18px; font-weight: bold; color: #0f172a;");
+    layout->addWidget(lblTitle);
+
+    QLabel *lblAuthor = new QLabel("Tác giả: " + author);
+    lblAuthor->setStyleSheet("font-size: 13px; color: #475569;");
+    layout->addWidget(lblAuthor);
+
+    QLabel *lblCat = new QLabel("Thể loại: " + category);
+    lblCat->setStyleSheet("font-size: 13px; color: #475569;");
+    layout->addWidget(lblCat);
+
+    QLabel *lblYear = new QLabel("Năm xuất bản: " + QString::number(year));
+    lblYear->setStyleSheet("font-size: 13px; color: #475569;");
+    layout->addWidget(lblYear);
+
+    QLabel *lblQty = new QLabel("Số lượng kho: " + QString::number(quantity) + " quyển");
+    lblQty->setStyleSheet("font-size: 13px; color: #16a34a; font-weight: bold;");
+    layout->addWidget(lblQty);
+
+    QLabel *lblPrice = new QLabel("Giá sách: $" + QString::number(price, 'f', 2));
+    lblPrice->setStyleSheet("font-size: 14px; color: #dc2626; font-weight: bold;");
+    layout->addWidget(lblPrice);
+
+    layout->addStretch();
+
+    QPushButton *closeBtn = new QPushButton("Đóng");
+    closeBtn->setCursor(Qt::PointingHandCursor);
+    closeBtn->setStyleSheet("background-color: #2563eb; color: white; padding: 9px; border-radius: 5px; font-weight: bold;");
+    layout->addWidget(closeBtn);
+
+    connect(closeBtn, &QPushButton::clicked, &detailDialog, &QDialog::accept);
+
+    detailDialog.exec();
 }

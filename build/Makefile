@@ -178,6 +178,102 @@ QtFirstApp_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/QtFirstApp_autogen/mocs_compilation.cpp.s
 .PHONY : QtFirstApp_autogen/mocs_compilation.cpp.s
 
+src/controller/AdminController.obj: src/controller/AdminController.cpp.obj
+.PHONY : src/controller/AdminController.obj
+
+# target to build an object file
+src/controller/AdminController.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.obj
+.PHONY : src/controller/AdminController.cpp.obj
+
+src/controller/AdminController.i: src/controller/AdminController.cpp.i
+.PHONY : src/controller/AdminController.i
+
+# target to preprocess a source file
+src/controller/AdminController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.i
+.PHONY : src/controller/AdminController.cpp.i
+
+src/controller/AdminController.s: src/controller/AdminController.cpp.s
+.PHONY : src/controller/AdminController.s
+
+# target to generate assembly for a file
+src/controller/AdminController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/AdminController.cpp.s
+.PHONY : src/controller/AdminController.cpp.s
+
+src/controller/BookController.obj: src/controller/BookController.cpp.obj
+.PHONY : src/controller/BookController.obj
+
+# target to build an object file
+src/controller/BookController.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.obj
+.PHONY : src/controller/BookController.cpp.obj
+
+src/controller/BookController.i: src/controller/BookController.cpp.i
+.PHONY : src/controller/BookController.i
+
+# target to preprocess a source file
+src/controller/BookController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.i
+.PHONY : src/controller/BookController.cpp.i
+
+src/controller/BookController.s: src/controller/BookController.cpp.s
+.PHONY : src/controller/BookController.s
+
+# target to generate assembly for a file
+src/controller/BookController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/BookController.cpp.s
+.PHONY : src/controller/BookController.cpp.s
+
+src/controller/LoginController.obj: src/controller/LoginController.cpp.obj
+.PHONY : src/controller/LoginController.obj
+
+# target to build an object file
+src/controller/LoginController.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.obj
+.PHONY : src/controller/LoginController.cpp.obj
+
+src/controller/LoginController.i: src/controller/LoginController.cpp.i
+.PHONY : src/controller/LoginController.i
+
+# target to preprocess a source file
+src/controller/LoginController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.i
+.PHONY : src/controller/LoginController.cpp.i
+
+src/controller/LoginController.s: src/controller/LoginController.cpp.s
+.PHONY : src/controller/LoginController.s
+
+# target to generate assembly for a file
+src/controller/LoginController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/LoginController.cpp.s
+.PHONY : src/controller/LoginController.cpp.s
+
+src/controller/RequestController.obj: src/controller/RequestController.cpp.obj
+.PHONY : src/controller/RequestController.obj
+
+# target to build an object file
+src/controller/RequestController.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.obj
+.PHONY : src/controller/RequestController.cpp.obj
+
+src/controller/RequestController.i: src/controller/RequestController.cpp.i
+.PHONY : src/controller/RequestController.i
+
+# target to preprocess a source file
+src/controller/RequestController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.i
+.PHONY : src/controller/RequestController.cpp.i
+
+src/controller/RequestController.s: src/controller/RequestController.cpp.s
+.PHONY : src/controller/RequestController.s
+
+# target to generate assembly for a file
+src/controller/RequestController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/controller/RequestController.cpp.s
+.PHONY : src/controller/RequestController.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -321,6 +417,54 @@ src/view/dialogs/RegisterDialog.s: src/view/dialogs/RegisterDialog.cpp.s
 src/view/dialogs/RegisterDialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.s
 .PHONY : src/view/dialogs/RegisterDialog.cpp.s
+
+src/view/dialogs/RequestDialog.obj: src/view/dialogs/RequestDialog.cpp.obj
+.PHONY : src/view/dialogs/RequestDialog.obj
+
+# target to build an object file
+src/view/dialogs/RequestDialog.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj
+.PHONY : src/view/dialogs/RequestDialog.cpp.obj
+
+src/view/dialogs/RequestDialog.i: src/view/dialogs/RequestDialog.cpp.i
+.PHONY : src/view/dialogs/RequestDialog.i
+
+# target to preprocess a source file
+src/view/dialogs/RequestDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.i
+.PHONY : src/view/dialogs/RequestDialog.cpp.i
+
+src/view/dialogs/RequestDialog.s: src/view/dialogs/RequestDialog.cpp.s
+.PHONY : src/view/dialogs/RequestDialog.s
+
+# target to generate assembly for a file
+src/view/dialogs/RequestDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.s
+.PHONY : src/view/dialogs/RequestDialog.cpp.s
+
+src/view/dialogs/UserDetailDialog.obj: src/view/dialogs/UserDetailDialog.cpp.obj
+.PHONY : src/view/dialogs/UserDetailDialog.obj
+
+# target to build an object file
+src/view/dialogs/UserDetailDialog.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.obj
+.PHONY : src/view/dialogs/UserDetailDialog.cpp.obj
+
+src/view/dialogs/UserDetailDialog.i: src/view/dialogs/UserDetailDialog.cpp.i
+.PHONY : src/view/dialogs/UserDetailDialog.i
+
+# target to preprocess a source file
+src/view/dialogs/UserDetailDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.i
+.PHONY : src/view/dialogs/UserDetailDialog.cpp.i
+
+src/view/dialogs/UserDetailDialog.s: src/view/dialogs/UserDetailDialog.cpp.s
+.PHONY : src/view/dialogs/UserDetailDialog.s
+
+# target to generate assembly for a file
+src/view/dialogs/UserDetailDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/UserDetailDialog.cpp.s
+.PHONY : src/view/dialogs/UserDetailDialog.cpp.s
 
 src/view/widgets/AdminPanel.obj: src/view/widgets/AdminPanel.cpp.obj
 .PHONY : src/view/widgets/AdminPanel.obj
@@ -504,6 +648,18 @@ help:
 	@echo ... QtFirstApp_autogen/mocs_compilation.obj
 	@echo ... QtFirstApp_autogen/mocs_compilation.i
 	@echo ... QtFirstApp_autogen/mocs_compilation.s
+	@echo ... src/controller/AdminController.obj
+	@echo ... src/controller/AdminController.i
+	@echo ... src/controller/AdminController.s
+	@echo ... src/controller/BookController.obj
+	@echo ... src/controller/BookController.i
+	@echo ... src/controller/BookController.s
+	@echo ... src/controller/LoginController.obj
+	@echo ... src/controller/LoginController.i
+	@echo ... src/controller/LoginController.s
+	@echo ... src/controller/RequestController.obj
+	@echo ... src/controller/RequestController.i
+	@echo ... src/controller/RequestController.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
@@ -522,6 +678,12 @@ help:
 	@echo ... src/view/dialogs/RegisterDialog.obj
 	@echo ... src/view/dialogs/RegisterDialog.i
 	@echo ... src/view/dialogs/RegisterDialog.s
+	@echo ... src/view/dialogs/RequestDialog.obj
+	@echo ... src/view/dialogs/RequestDialog.i
+	@echo ... src/view/dialogs/RequestDialog.s
+	@echo ... src/view/dialogs/UserDetailDialog.obj
+	@echo ... src/view/dialogs/UserDetailDialog.i
+	@echo ... src/view/dialogs/UserDetailDialog.s
 	@echo ... src/view/widgets/AdminPanel.obj
 	@echo ... src/view/widgets/AdminPanel.i
 	@echo ... src/view/widgets/AdminPanel.s
