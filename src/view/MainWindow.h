@@ -2,27 +2,25 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QLabel>
-#include <QPushButton>
-#include <QGridLayout>
-#include <QScrollArea>
+#include "widgets/SearchWidget.h"
+#include "widgets/BookListView.h"
+#include "widgets/DashboardWidget.h"
+#include "widgets/StatusBar.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
 
 private slots:
-    void handleLoginLogout();
+    void handleLoginAction();
 
 private:
-    void setupUI();
-    void loadBooks();
-
+    SearchWidget* searchWidget;
+    BookListView* bookListView;
+    DashboardWidget* dashboardWidget;
+    StatusBar* statusBarWidget;
     bool isLoggedIn;
-    QLabel* userLabel;
-    QPushButton* loginBtn;
-    QGridLayout* gridLayout;
 };
 
 #endif // MAINWINDOW_H

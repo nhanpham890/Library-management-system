@@ -1,6 +1,6 @@
-CMakeFiles/QtFirstApp.dir/src/view/mainWindow.cpp.obj: \
- C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\src\view\mainWindow.cpp \
- C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\src\view\mainWindow.h \
+CMakeFiles/QtFirstApp.dir/src/view/MainWindow.cpp.obj: \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\src\view\MainWindow.cpp \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\src\view\MainWindow.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -386,6 +386,8 @@ CMakeFiles/QtFirstApp.dir/src/view/mainWindow.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabwidget.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\src\view\widgets/SearchWidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
@@ -393,8 +395,43 @@ CMakeFiles/QtFirstApp.dir/src/view/mainWindow.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qurl.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\src\view\widgets/BookListView.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollArea \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QList \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFrame \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\src\view\widgets/DashboardWidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLineEdit \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlineedit.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyleoption.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qslider.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabbar.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\src\view\widgets/StatusBar.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\src\view\dialogs/LoginDialog.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDialog \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout

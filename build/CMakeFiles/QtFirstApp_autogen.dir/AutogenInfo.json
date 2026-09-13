@@ -313,6 +313,48 @@
 			"MU",
 			"PLESE7JIXV/moc_RegisterDialog.cpp",
 			null
+		],
+		[
+			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/AdminPanel.h",
+			"MU",
+			"LV7LHKBMOZ/moc_AdminPanel.cpp",
+			null
+		],
+		[
+			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/BookListView.h",
+			"MU",
+			"LV7LHKBMOZ/moc_BookListView.cpp",
+			null
+		],
+		[
+			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/BorrowView.h",
+			"MU",
+			"LV7LHKBMOZ/moc_BorrowView.cpp",
+			null
+		],
+		[
+			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/DashboardWidget.h",
+			"MU",
+			"LV7LHKBMOZ/moc_DashboardWidget.cpp",
+			null
+		],
+		[
+			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/FineListView.h",
+			"MU",
+			"LV7LHKBMOZ/moc_FineListView.cpp",
+			null
+		],
+		[
+			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/SearchWidget.h",
+			"MU",
+			"LV7LHKBMOZ/moc_SearchWidget.cpp",
+			null
+		],
+		[
+			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/StatusBar.h",
+			"MU",
+			"LV7LHKBMOZ/moc_StatusBar.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],

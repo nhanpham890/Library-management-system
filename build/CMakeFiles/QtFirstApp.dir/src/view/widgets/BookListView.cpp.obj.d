@@ -384,14 +384,20 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/BookListView.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qsizepolicy.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollArea \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QList \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFrame \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
