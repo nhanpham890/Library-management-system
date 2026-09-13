@@ -22,6 +22,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/QtFirstApp.dir/src/view/dialogs/BorrowDialog.cpp.obj.d"
   "CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj"
   "CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.obj.d"
+  "CMakeFiles/QtFirstApp.dir/src/view/dialogs/MailBoxDialog.cpp.obj"
+  "CMakeFiles/QtFirstApp.dir/src/view/dialogs/MailBoxDialog.cpp.obj.d"
   "CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj"
   "CMakeFiles/QtFirstApp.dir/src/view/dialogs/RegisterDialog.cpp.obj.d"
   "CMakeFiles/QtFirstApp.dir/src/view/dialogs/RequestDialog.cpp.obj"

@@ -41,6 +41,8 @@ add_executable(QtFirstApp
     src/view/dialogs/RegisterDialog.cpp
     src/view/dialogs/UserDetailDialog.cpp
     src/view/dialogs/UserDetailDialog.cpp
+    src/view/dialogs/MailBoxDialog.h
+    src/view/dialogs/MailBoxDialog.cpp
 
     src/view/widgets/AdminPanel.h
     src/view/widgets/AdminPanel.cpp

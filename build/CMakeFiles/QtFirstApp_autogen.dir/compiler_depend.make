@@ -214,6 +214,7 @@ QtFirstApp_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLineEdit \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QScrollArea \
@@ -235,6 +236,8 @@ QtFirstApp_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlineedit.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
@@ -699,6 +702,8 @@ QtFirstApp_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/BorrowDialog.h \
   C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/LoginDialog.cpp \
   C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/LoginDialog.h \
+  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/MailBoxDialog.cpp \
+  C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/MailBoxDialog.h \
   C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RegisterDialog.cpp \
   C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RegisterDialog.h \
   C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RequestDialog.cpp \
@@ -788,6 +793,8 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h:
 C:/Program\ Files/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-CXX.cmake:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreVersionlessAliasTargets.cmake:
 
@@ -1237,6 +1244,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refw
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qsysinfo.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtaggedpointer.h:
@@ -1275,9 +1284,9 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/pthread_compat.h:
 
-C:/Qt/6.11.1/mingw_64/include/QtCore/qtmetamacros.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/qtmetamacros.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector:
 
@@ -1511,6 +1520,8 @@ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/types.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomExternalReferenceHelpers.cmake:
 
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h:
@@ -1544,6 +1555,8 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargetsPr
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/pthread_signal.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:
+
+C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/MailBoxDialog.cpp:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:
 
@@ -1652,8 +1665,6 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits:
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicToolHelpers.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:
 
@@ -1935,6 +1946,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/pars
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h:
+
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/ctype.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h:
@@ -2134,6 +2147,8 @@ C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/c
 C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/controller/LoginController.h:
 
 C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/BorrowDialog.h:
+
+C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/MailBoxDialog.h:
 
 C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RegisterDialog.cpp:
 

@@ -407,20 +407,11 @@ CMakeFiles/QtFirstApp.dir/QtFirstApp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
- C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_RegisterDialog.cpp \
- C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RegisterDialog.h \
- C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_RequestDialog.cpp \
- C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RequestDialog.h \
- C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_UserDetailDialog.cpp \
- C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/UserDetailDialog.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
- C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\LV7LHKBMOZ/moc_AdminPanel.cpp \
- C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/AdminPanel.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTabWidget \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtablewidget.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtableview.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_MailBoxDialog.cpp \
+ C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/MailBoxDialog.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h \
@@ -436,6 +427,20 @@ CMakeFiles/QtFirstApp.dir/QtFirstApp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabbar.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_RegisterDialog.cpp \
+ C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RegisterDialog.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_RequestDialog.cpp \
+ C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/RequestDialog.h \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\PLESE7JIXV/moc_UserDetailDialog.cpp \
+ C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/dialogs/UserDetailDialog.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
+ C:\Users\thanh\OneDrive\Desktop\Library\ Management\ System\ Specification\build\QtFirstApp_autogen\LV7LHKBMOZ/moc_AdminPanel.cpp \
+ C:/Users/thanh/OneDrive/Desktop/Library\ Management\ System\ Specification/src/view/widgets/AdminPanel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTabWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtablewidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtableview.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \

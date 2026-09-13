@@ -447,4 +447,7 @@ CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QDateTime \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcalendar.h

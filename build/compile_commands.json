@@ -79,6 +79,12 @@
 },
 {
   "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\dialogs\\MailBoxDialog.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\dialogs\\MailBoxDialog.cpp\"",
+  "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/MailBoxDialog.cpp",
+  "output": "CMakeFiles/QtFirstApp.dir/src/view/dialogs/MailBoxDialog.cpp.obj"
+},
+{
+  "directory": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build",
   "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles\\QtFirstApp.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QtFirstApp.dir\\src\\view\\widgets\\AdminPanel.cpp.obj -c \"C:\\Users\\thanh\\OneDrive\\Desktop\\Library Management System Specification\\src\\view\\widgets\\AdminPanel.cpp\"",
   "file": "C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/widgets/AdminPanel.cpp",
   "output": "CMakeFiles/QtFirstApp.dir/src/view/widgets/AdminPanel.cpp.obj"

@@ -33,7 +33,8 @@ public:
                    "password TEXT NOT NULL, "
                    "email TEXT, "
                    "phone TEXT, "
-                   "role TEXT DEFAULT 'Member')");
+                   "role TEXT DEFAULT 'Member', "
+                   "status TEXT DEFAULT 'Active')");
 
         query.exec("CREATE TABLE IF NOT EXISTS books ("
                    "id INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -52,12 +53,17 @@ public:
                    "status TEXT, "
                    "request_date DATE)");
 
+        query.exec("CREATE TABLE IF NOT EXISTS notifications ("
+                   "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                   "user_id INTEGER, "
+                   "message TEXT, "
+                   "created_at DATETIME)");
         QSqlQuery checkAdmin;
         checkAdmin.exec("SELECT id FROM users WHERE username = 'admin'");
         if (!checkAdmin.next()) {
             QSqlQuery insertAdmin;
-            insertAdmin.prepare("INSERT INTO users (username, password, email, phone, role) "
-                                "VALUES ('admin', 'admin123', 'admin@uth.edu.vn', '0123456789', 'Admin')");
+            insertAdmin.prepare("INSERT INTO users (username, password, email, phone, role, status) "
+                                "VALUES ('admin', 'admin123', 'admin@uth.edu.vn', '0123456789', 'Admin', 'Active')");
             insertAdmin.exec();
         }
 

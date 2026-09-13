@@ -6,6 +6,7 @@
 #include "dialogs/RegisterDialog.h"
 #include "dialogs/UserDetailDialog.h"
 #include "dialogs/RequestDialog.h"
+#include "dialogs/MailboxDialog.h" // Nhúng thư viện Hộp thư mới thêm
 #include "widgets/AdminPanel.h"
 
 #include <QVBoxLayout>
@@ -26,11 +27,11 @@ MainWindow::MainWindow(QWidget *parent)
     resize(1000, 700);
     setStyleSheet("background-color: #ffffff; color: #1e293b;");
 
-    // Đảm bảo cột status tồn tại trong bảng users
+    // Lệnh dự phòng: Đảm bảo cột status tồn tại trong bảng users (tránh lỗi nếu CSDL cũ chưa có)
     QSqlQuery alterQuery;
     alterQuery.exec("ALTER TABLE users ADD COLUMN status TEXT DEFAULT 'Active'");
 
-    // Khôi phục phiên đăng nhập khi Reload App
+    // Khôi phục phiên đăng nhập khi Reload App qua tham số dòng lệnh
     QStringList args = QCoreApplication::arguments();
     QString autoLoginUser = "";
     
@@ -63,7 +64,26 @@ MainWindow::MainWindow(QWidget *parent)
 
     headerLayout->addStretch();
 
-    // Nút Gửi yêu cầu (Send Request)
+    // 1. Nút Hộp thư (Mailbox)
+    QPushButton *mailboxBtn = new QPushButton("Hộp thư 📬", this);
+    mailboxBtn->setCursor(Qt::PointingHandCursor);
+    mailboxBtn->setVisible(isLoggedIn);
+    mailboxBtn->setStyleSheet(
+        "QPushButton {"
+        "   background-color: #38bdf8;"
+        "   color: #0c4a6e;"
+        "   padding: 8px 14px;"
+        "   border-radius: 6px;"
+        "   font-weight: bold;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #0ea5e9;"
+        "   color: white;"
+        "}"
+    );
+    headerLayout->addWidget(mailboxBtn);
+
+    // 2. Nút Gửi yêu cầu (Send Request)
     QPushButton *sendRequestBtn = new QPushButton("Gửi yêu cầu", this);
     sendRequestBtn->setCursor(Qt::PointingHandCursor);
     sendRequestBtn->setVisible(isLoggedIn);
@@ -81,7 +101,7 @@ MainWindow::MainWindow(QWidget *parent)
     );
     headerLayout->addWidget(sendRequestBtn);
 
-    // Nút Quản lý Admin
+    // 3. Nút Quản lý Admin
     QPushButton *adminPanelBtn = new QPushButton("Quản lý (Admin)", this);
     adminPanelBtn->setCursor(Qt::PointingHandCursor);
     adminPanelBtn->setVisible(false);
@@ -139,7 +159,7 @@ MainWindow::MainWindow(QWidget *parent)
     headerLayout->addWidget(authBtn);
     mainLayout->addLayout(headerLayout);
 
-    // Bật nút Admin nếu tài khoản phục hồi là Admin
+    // Bật hiển thị nút Admin nếu tài khoản đang phục hồi (Reload) là Admin
     if (isLoggedIn) {
         QSqlQuery roleQuery;
         roleQuery.prepare("SELECT role FROM users WHERE username = ?");
@@ -160,7 +180,14 @@ MainWindow::MainWindow(QWidget *parent)
     statusBarWidget = new StatusBar(this);
     mainLayout->addWidget(statusBarWidget);
 
-    // Chặn tài khoản bị đình chỉ gửi yêu cầu
+    // Sự kiện mở Hộp thư
+    connect(mailboxBtn, &QPushButton::clicked, this, [=]() {
+        QString currentUsername = userStatusBtn->text().replace("Xin chào, ", "").trimmed();
+        MailboxDialog mailboxDlg(currentUsername, this);
+        mailboxDlg.exec();
+    });
+
+    // Sự kiện Gửi yêu cầu (Chặn nếu tài khoản bị Đình chỉ - Suspended)
     connect(sendRequestBtn, &QPushButton::clicked, this, [=]() {
         QString currentUsername = userStatusBtn->text().replace("Xin chào, ", "").trimmed();
 
@@ -179,7 +206,7 @@ MainWindow::MainWindow(QWidget *parent)
         reqDlg.exec();
     });
 
-    // Mở bảng Quản trị Admin
+    // Sự kiện mở bảng Quản trị Admin
     connect(adminPanelBtn, &QPushButton::clicked, this, [=]() {
         AdminPanel *adminPanel = new AdminPanel();
         adminPanel->resize(950, 550);
@@ -219,10 +246,12 @@ MainWindow::MainWindow(QWidget *parent)
                     }
                 }
 
+                // Đăng nhập thành công, bật các nút tính năng
                 isLoggedIn = true;
                 userStatusBtn->setText("Xin chào, " + username);
                 authBtn->setText("Đăng xuất");
                 sendRequestBtn->setVisible(true);
+                mailboxBtn->setVisible(true);
 
                 if (role.toLower() == "admin") {
                     adminPanelBtn->setVisible(true);
@@ -233,16 +262,18 @@ MainWindow::MainWindow(QWidget *parent)
                 }
             }
         } else {
+            // Xử lý khi đăng xuất
             isLoggedIn = false;
             adminPanelBtn->setVisible(false);
             sendRequestBtn->setVisible(false);
+            mailboxBtn->setVisible(false);
             userStatusBtn->setText("Xin chào, Guest");
             authBtn->setText("Đăng nhập / Đăng ký");
             bookListView->loadBooksFromDatabase();
         }
     });
 
-    // Làm mới App giữ nguyên phiên
+    // Sự kiện Làm mới App giữ nguyên phiên đăng nhập
     connect(reloadBtn, &QPushButton::clicked, this, [=]() {
         QString program = QCoreApplication::applicationFilePath();
         QStringList arguments;
@@ -258,6 +289,7 @@ MainWindow::MainWindow(QWidget *parent)
         QCoreApplication::quit();
     });
 
+    // Sự kiện xem thông tin tài khoản cá nhân
     connect(userStatusBtn, &QPushButton::clicked, this, [=]() {
         if (!isLoggedIn) {
             QMessageBox::information(this, "Thông báo", "Bạn chưa đăng nhập tài khoản!");
@@ -268,6 +300,7 @@ MainWindow::MainWindow(QWidget *parent)
         detailDlg.exec();
     });
 
+    // Sự kiện Tìm kiếm sách
     connect(dashboardWidget, &DashboardWidget::searchTriggered, this, [=](const QString &criteria, const QString &keyword) {
         bookListView->loadBooksFromDatabase(keyword, criteria);
         statusBarWidget->setStatusMessage(QString("Đang tìm kiếm theo: %1 với từ khóa: \"%2\"").arg(criteria).arg(keyword));

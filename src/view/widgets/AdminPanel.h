@@ -28,6 +28,7 @@ private:
     void viewSelectedUserDetail();
     void addNewMember();
     void suspendSelectedUser();
+    void unsuspendSelectedUser();
     void deleteSelectedUser();
 
     // Quản lý Sách
@@ -36,7 +37,7 @@ private:
     void removeBook();
     
     // Quản lý Yêu cầu
-    void handleApproveRequest(const QString &actionType);
+    void handleApproveRequest(); // Bỏ tham số actionType đi vì sẽ lấy trực tiếp từ bảng
 
 private:
     QTabWidget *tabWidget;
@@ -48,6 +49,7 @@ private:
     QPushButton *viewMemberBtn;
     QPushButton *addMemberBtn;
     QPushButton *suspendMemberBtn;
+    QPushButton *unsuspendMemberBtn;
     QPushButton *deleteMemberBtn;
 
     // Tab Sách
@@ -60,10 +62,7 @@ private:
     // Tab Yêu cầu
     QWidget *requestsTab;
     QTableWidget *requestTable;
-    QPushButton *approveBorrowBtn;
-    QPushButton *approveReturnBtn;
-    QPushButton *approveReserveBtn;
-    QPushButton *approveRenewBtn;
+    QPushButton *approveRequestBtn; // <-- Chỉ giữ lại 1 nút Duyệt duy nhất
 };
 
 #endif // ADMINPANEL_H

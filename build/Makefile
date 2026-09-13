@@ -394,6 +394,30 @@ src/view/dialogs/LoginDialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/LoginDialog.cpp.s
 .PHONY : src/view/dialogs/LoginDialog.cpp.s
 
+src/view/dialogs/MailBoxDialog.obj: src/view/dialogs/MailBoxDialog.cpp.obj
+.PHONY : src/view/dialogs/MailBoxDialog.obj
+
+# target to build an object file
+src/view/dialogs/MailBoxDialog.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/MailBoxDialog.cpp.obj
+.PHONY : src/view/dialogs/MailBoxDialog.cpp.obj
+
+src/view/dialogs/MailBoxDialog.i: src/view/dialogs/MailBoxDialog.cpp.i
+.PHONY : src/view/dialogs/MailBoxDialog.i
+
+# target to preprocess a source file
+src/view/dialogs/MailBoxDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/MailBoxDialog.cpp.i
+.PHONY : src/view/dialogs/MailBoxDialog.cpp.i
+
+src/view/dialogs/MailBoxDialog.s: src/view/dialogs/MailBoxDialog.cpp.s
+.PHONY : src/view/dialogs/MailBoxDialog.s
+
+# target to generate assembly for a file
+src/view/dialogs/MailBoxDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtFirstApp.dir\build.make CMakeFiles/QtFirstApp.dir/src/view/dialogs/MailBoxDialog.cpp.s
+.PHONY : src/view/dialogs/MailBoxDialog.cpp.s
+
 src/view/dialogs/RegisterDialog.obj: src/view/dialogs/RegisterDialog.cpp.obj
 .PHONY : src/view/dialogs/RegisterDialog.obj
 
@@ -675,6 +699,9 @@ help:
 	@echo ... src/view/dialogs/LoginDialog.obj
 	@echo ... src/view/dialogs/LoginDialog.i
 	@echo ... src/view/dialogs/LoginDialog.s
+	@echo ... src/view/dialogs/MailBoxDialog.obj
+	@echo ... src/view/dialogs/MailBoxDialog.i
+	@echo ... src/view/dialogs/MailBoxDialog.s
 	@echo ... src/view/dialogs/RegisterDialog.obj
 	@echo ... src/view/dialogs/RegisterDialog.i
 	@echo ... src/view/dialogs/RegisterDialog.s

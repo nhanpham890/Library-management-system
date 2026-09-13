@@ -637,7 +637,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "QtFirstApp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-QtFirstApp-Debug-327a0d2fe88233c90063.json",
+					"jsonFile" : "target-QtFirstApp-Debug-b19e1c17118a22231eed.json",
 					"name" : "QtFirstApp",
 					"projectIndex" : 0
 				},
@@ -651,7 +651,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "QtFirstApp_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-QtFirstApp_autogen_timestamp_deps-Debug-9d1a9450cb0a6e61fb26.json",
+					"jsonFile" : "target-QtFirstApp_autogen_timestamp_deps-Debug-2ce73f097e1baa848f5f.json",
 					"name" : "QtFirstApp_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}

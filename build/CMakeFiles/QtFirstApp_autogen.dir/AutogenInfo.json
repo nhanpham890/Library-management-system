@@ -386,6 +386,12 @@
 			null
 		],
 		[
+			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/MailBoxDialog.h",
+			"MU",
+			"PLESE7JIXV/moc_MailBoxDialog.cpp",
+			null
+		],
+		[
 			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/RegisterDialog.h",
 			"MU",
 			"PLESE7JIXV/moc_RegisterDialog.cpp",
@@ -566,6 +572,11 @@
 		],
 		[
 			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/LoginDialog.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/src/view/dialogs/MailBoxDialog.cpp",
 			"MU",
 			null
 		],

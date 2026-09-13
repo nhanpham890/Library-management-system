@@ -12,10 +12,11 @@
 #include <QDoubleSpinBox>
 #include <QPushButton>
 #include <QLabel>
+#include <QDateTime>
 
 AdminPanel::AdminPanel(QWidget *parent) : QWidget(parent) {
     setWindowTitle("Hệ thống Quản trị Thư viện (Admin Dashboard)");
-    resize(950, 550);
+    resize(1000, 550); 
     
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins(10, 10, 10, 10);
@@ -55,15 +56,18 @@ void AdminPanel::setupMembersTab() {
     viewMemberBtn = new QPushButton("Xem chi tiết");
     addMemberBtn = new QPushButton("Thêm thành viên");
     suspendMemberBtn = new QPushButton("Đình chỉ (Suspend)");
+    unsuspendMemberBtn = new QPushButton("Mở khóa (Unsuspend)"); 
     deleteMemberBtn = new QPushButton("Xóa thành viên");
 
-    deleteMemberBtn->setObjectName("dangerBtn");
-    suspendMemberBtn->setObjectName("warningBtn");
+    deleteMemberBtn->setObjectName("dangerBtn");      
+    suspendMemberBtn->setObjectName("warningBtn");    
+    unsuspendMemberBtn->setObjectName("safeBtn");     
 
     btnLayout->addWidget(refreshMemberBtn);
     btnLayout->addWidget(viewMemberBtn);
     btnLayout->addWidget(addMemberBtn);
     btnLayout->addWidget(suspendMemberBtn);
+    btnLayout->addWidget(unsuspendMemberBtn);
     btnLayout->addWidget(deleteMemberBtn);
     layout->addLayout(btnLayout);
 
@@ -71,6 +75,7 @@ void AdminPanel::setupMembersTab() {
     connect(viewMemberBtn, &QPushButton::clicked, this, &AdminPanel::viewSelectedUserDetail);
     connect(addMemberBtn, &QPushButton::clicked, this, &AdminPanel::addNewMember);
     connect(suspendMemberBtn, &QPushButton::clicked, this, &AdminPanel::suspendSelectedUser);
+    connect(unsuspendMemberBtn, &QPushButton::clicked, this, &AdminPanel::unsuspendSelectedUser); 
     connect(deleteMemberBtn, &QPushButton::clicked, this, &AdminPanel::deleteSelectedUser);
 }
 
@@ -117,24 +122,17 @@ void AdminPanel::setupRequestsTab() {
     layout->addWidget(requestTable);
 
     QHBoxLayout *btnLayout = new QHBoxLayout();
-    approveBorrowBtn = new QPushButton("Duyệt Mượn (Borrow)");
-    approveReserveBtn = new QPushButton("Duyệt Đặt trước (Reserve)");
-    approveRenewBtn = new QPushButton("Duyệt Gia hạn (Renew)");
-    approveReturnBtn = new QPushButton("Duyệt Trả & Phạt (Return & Fine)");
-
-    approveReturnBtn->setObjectName("warningBtn");
-
-    btnLayout->addWidget(approveBorrowBtn);
-    btnLayout->addWidget(approveReserveBtn);
-    btnLayout->addWidget(approveRenewBtn);
-    btnLayout->addStretch();
-    btnLayout->addWidget(approveReturnBtn);
+    
+    // Khởi tạo một nút duy nhất để duyệt
+    approveRequestBtn = new QPushButton("Duyệt yêu cầu (Approve)");
+    approveRequestBtn->setObjectName("safeBtn"); // Dùng màu xanh lá nổi bật cho nút duyệt
+    
+    btnLayout->addStretch(); // Đẩy nút sang bên phải hoặc căn giữa tùy ý
+    btnLayout->addWidget(approveRequestBtn);
     layout->addLayout(btnLayout);
 
-    connect(approveBorrowBtn, &QPushButton::clicked, this, [=]() { handleApproveRequest("Borrow"); });
-    connect(approveReserveBtn, &QPushButton::clicked, this, [=]() { handleApproveRequest("Reserve"); });
-    connect(approveRenewBtn, &QPushButton::clicked, this, [=]() { handleApproveRequest("Renew"); });
-    connect(approveReturnBtn, &QPushButton::clicked, this, [=]() { handleApproveRequest("Return & Fine"); });
+    // Gắn sự kiện vào hàm handleApproveRequest
+    connect(approveRequestBtn, &QPushButton::clicked, this, &AdminPanel::handleApproveRequest);
 }
 
 void AdminPanel::setupStyles() {
@@ -144,12 +142,18 @@ void AdminPanel::setupStyles() {
         "QTabBar::tab:selected { background: white; color: #2563eb; border-bottom: none; }"
         "QTableWidget { background-color: white; color: #0f172a; gridline-color: #e2e8f0; font-size: 13px; }"
         "QHeaderView::section { background-color: #f8fafc; color: #0f172a; font-weight: bold; padding: 5px; border: 1px solid #e2e8f0; }"
+        
         "QPushButton { background-color: #2563eb; color: white; padding: 8px 14px; border-radius: 5px; font-weight: bold; }"
         "QPushButton:hover { background-color: #1d4ed8; }"
+        
         "QPushButton#dangerBtn { background-color: #dc2626; }"
         "QPushButton#dangerBtn:hover { background-color: #b91c1c; }"
+        
         "QPushButton#warningBtn { background-color: #d97706; }"
         "QPushButton#warningBtn:hover { background-color: #b45309; }"
+        
+        "QPushButton#safeBtn { background-color: #10b981; }" 
+        "QPushButton#safeBtn:hover { background-color: #059669; }"
     );
 }
 
@@ -284,20 +288,64 @@ void AdminPanel::suspendSelectedUser() {
 
     QString id = memberTable->item(currentRow, 0)->text();
     QString username = memberTable->item(currentRow, 1)->text();
+    QString currentStatus = memberTable->item(currentRow, 5)->text();
+
     if (username.toLower() == "admin") {
         QMessageBox::warning(this, "Từ chối", "Không thể đình chỉ tài khoản quản trị viên gốc!");
         return;
     }
+    
+    if (currentStatus == "Đã đình chỉ") {
+        QMessageBox::information(this, "Thông báo", "Tài khoản này đã bị đình chỉ từ trước!");
+        return;
+    }
 
-    QSqlQuery query;
-    query.prepare("UPDATE users SET status = 'Suspended' WHERE id = :id");
-    query.bindValue(":id", id);
+    if (QMessageBox::question(this, "Xác nhận", "Bạn có chắc chắn muốn đình chỉ tài khoản: " + username + "?") == QMessageBox::Yes) {
+        QSqlQuery query;
+        query.prepare("UPDATE users SET status = 'Suspended' WHERE id = :id");
+        query.bindValue(":id", id);
 
-    if (query.exec()) {
-        QMessageBox::information(this, "Thành công", "Đã đình chỉ tài khoản thành công!");
-        loadUserData();
-    } else {
-        QMessageBox::critical(this, "Lỗi", "Không thể cập nhật trạng thái đình chỉ vào cơ sở dữ liệu!");
+        if (query.exec()) {
+            QMessageBox::information(this, "Thành công", "Đã đình chỉ tài khoản thành công!");
+            loadUserData();
+        } else {
+            QMessageBox::critical(this, "Lỗi", "Không thể cập nhật trạng thái đình chỉ vào cơ sở dữ liệu!");
+        }
+    }
+}
+
+void AdminPanel::unsuspendSelectedUser() {
+    int currentRow = memberTable->currentRow();
+    if (currentRow < 0) {
+        QMessageBox::warning(this, "Lỗi", "Vui lòng chọn một độc giả để mở khóa (ngừng đình chỉ)!");
+        return;
+    }
+
+    QString id = memberTable->item(currentRow, 0)->text();
+    QString username = memberTable->item(currentRow, 1)->text();
+    QString currentStatus = memberTable->item(currentRow, 5)->text();
+
+    if (username.toLower() == "admin") {
+        QMessageBox::information(this, "Thông báo", "Tài khoản quản trị viên gốc luôn ở trạng thái hoạt động!");
+        return;
+    }
+
+    if (currentStatus == "Hoạt động") {
+        QMessageBox::information(this, "Thông báo", "Tài khoản này đang hoạt động bình thường, không cần mở khóa!");
+        return;
+    }
+
+    if (QMessageBox::question(this, "Xác nhận", "Bạn có chắc chắn muốn mở khóa cho tài khoản: " + username + "?") == QMessageBox::Yes) {
+        QSqlQuery query;
+        query.prepare("UPDATE users SET status = 'Active' WHERE id = :id");
+        query.bindValue(":id", id);
+
+        if (query.exec()) {
+            QMessageBox::information(this, "Thành công", "Đã mở khóa tài khoản thành công! Độc giả này có thể tiếp tục sử dụng hệ thống.");
+            loadUserData();
+        } else {
+            QMessageBox::critical(this, "Lỗi", "Không thể cập nhật trạng thái mở khóa vào cơ sở dữ liệu!");
+        }
     }
 }
 
@@ -341,7 +389,6 @@ void AdminPanel::loadBookData() {
 
 void AdminPanel::loadRequestData() {
     requestTable->setRowCount(0);
-    // Chỉ tải các yêu cầu có trạng thái Pending để yêu cầu sau khi duyệt sẽ biến mất
     QSqlQuery query("SELECT id, user_id, book_id, type, request_date, status FROM requests WHERE status = 'Pending' ORDER BY id ASC");
     int row = 0;
     while (query.next()) {
@@ -353,7 +400,8 @@ void AdminPanel::loadRequestData() {
     }
 }
 
-void AdminPanel::handleApproveRequest(const QString &actionType) {
+// Cập nhật lại hàm duyệt: Đọc thẳng thông tin từ bảng thay vì truyền biến
+void AdminPanel::handleApproveRequest() {
     int currentRow = requestTable->currentRow();
     if (currentRow < 0) {
         QMessageBox::warning(this, "Lỗi", "Vui lòng chọn một yêu cầu trong bảng để xử lý!");
@@ -361,12 +409,28 @@ void AdminPanel::handleApproveRequest(const QString &actionType) {
     }
 
     QString requestId = requestTable->item(currentRow, 0)->text();
+    QString userId = requestTable->item(currentRow, 1)->text();
+    
+    // Lấy Loại Yêu Cầu từ cột thứ 4 (Index = 3)
+    QString actionType = requestTable->item(currentRow, 3)->text();
+    
     QSqlQuery query;
     query.prepare("UPDATE requests SET status = 'Approved' WHERE id = :id");
     query.bindValue(":id", requestId);
 
     if (query.exec()) {
-        QMessageBox::information(this, "Thành công", QString("Đã duyệt yêu cầu thành công (%1)!").arg(actionType));
+        // Gửi thông báo vào hộp thư của người dùng với Loại YC vừa lấy được
+        QString message = QString("✅ Yêu cầu '%1' (Mã YC: %2) của bạn đã được Admin duyệt thành công!").arg(actionType, requestId);
+        QString currentDate = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss");
+
+        QSqlQuery notifQuery;
+        notifQuery.prepare("INSERT INTO notifications (user_id, message, created_at) VALUES (:user_id, :message, :date)");
+        notifQuery.bindValue(":user_id", userId);
+        notifQuery.bindValue(":message", message);
+        notifQuery.bindValue(":date", currentDate);
+        notifQuery.exec();
+
+        QMessageBox::information(this, "Thành công", "Đã duyệt yêu cầu thành công!");
         loadRequestData();
         emit dataChanged();
     } else {

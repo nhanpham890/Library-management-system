@@ -3,6 +3,7 @@
 #include "PLESE7JIXV/moc_AdminDialog.cpp"
 #include "PLESE7JIXV/moc_BorrowDialog.cpp"
 #include "PLESE7JIXV/moc_LoginDialog.cpp"
+#include "PLESE7JIXV/moc_MailBoxDialog.cpp"
 #include "PLESE7JIXV/moc_RegisterDialog.cpp"
 #include "PLESE7JIXV/moc_RequestDialog.cpp"
 #include "PLESE7JIXV/moc_UserDetailDialog.cpp"
