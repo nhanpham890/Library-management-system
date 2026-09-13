@@ -1,0 +1,5 @@
+C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/QtFirstApp.dir
+C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/edit_cache.dir
+C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/rebuild_cache.dir
+C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/QtFirstApp_autogen_timestamp_deps.dir
+C:/Users/thanh/OneDrive/Desktop/Library Management System Specification/build/CMakeFiles/QtFirstApp_autogen.dir
